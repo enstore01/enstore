@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,15 +9,46 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@font-face {
+  font-family: "Knight Vision";
+  src: url("/fonts/KnightVision.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium inline-flex items-center justify-center tracking-tight;
+  }
+
+  .btn-primary {
+    @apply bg-brand hover:bg-accent text-white;
+  }
+
+  .btn-text {
+    @apply text-navy bg-transparent;
+  }
+
+  .top-header {
+    @apply text-4xl lg:text-6xl font-bold tracking-tighter py-2 bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent mt-4 font-knight;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif;
+   */
+  /* font-family: "Knight Vision", sans-serif; */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
