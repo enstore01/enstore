@@ -5,11 +5,11 @@ import { notFound } from "next/navigation";
 import { getPost } from "@/sanity/lib/client";
 import { PortableText } from "next-sanity";
 
-export default async function BlogPost({
-  params,
-}: {
+type Props = {
   params: { blogSlug: string };
-}) {
+};
+
+export default async function BlogPost({ params }: Props) {
   const post = await getPost(params.blogSlug);
 
   if (!post) {
