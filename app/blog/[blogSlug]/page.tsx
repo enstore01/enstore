@@ -8,7 +8,7 @@ import { PortableText } from "next-sanity";
 export default async function BlogPost({
   params,
 }: {
-  params: Record<string, string>;
+  params: { blogSlug: string };
 }) {
   const post = await getPost(params.blogSlug);
 
