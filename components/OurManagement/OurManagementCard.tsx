@@ -17,7 +17,7 @@ const OurManagementCard: React.FC<OurManagementCardProps> = ({
   link,
 }) => {
   return (
-    <div className="bg-light shadow-lg rounded overflow-hidden w-full max-w-xs flex-none snap-start mt-10">
+    <div className="bg-light shadow-lg rounded overflow-hidden w-full max-w-[350px] flex-none snap-start mt-10">
       {/* Image */}
       <div className="relative w-full aspect-[4/3]">
         <Image
@@ -40,7 +40,7 @@ const OurManagementCard: React.FC<OurManagementCardProps> = ({
           </p>
         </div>
 
-        <p className="mt-1 text-navy">{title}</p>
+        <p className="mt-1 text-accent font-semibold">{title}</p>
         <p className="mt-4 text-gray-600">{description}</p>
       </div>
     </div>

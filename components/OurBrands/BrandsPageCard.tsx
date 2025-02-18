@@ -64,7 +64,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
               src={images[currentImageIndex]}
               alt={`Courvoisier image ${currentImageIndex + 1}`}
               fill
-              className=""
+              className="object-cover"
               priority
             />
           </motion.div>
@@ -99,15 +99,19 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
       </div>
       <div className="lg:w-1/2 lg:pl-8 mt-6 lg:mt-0 p-4">
         <h2 className="top-header mt-0 pb-3">{title}</h2>
-        <div className="flex gap-2 mt-2 font-semibold items-center text-gold ml-1">
+        <div className="flex flex-wrap gap-2 mt-2 font-semibold items-center text-gold ml-1">
           {variations.map((variation, index) => (
-            <span key={index} className="px-2 border border-gold rounded-md">
+            <span
+              key={index}
+              className={`px-2 border border-gold rounded-md cursor-pointer ${currentImageIndex === index ? "bg-brand text-light border-none" : ""}`}
+              onClick={() => setCurrentImageIndex(index)}
+            >
               {variation}
             </span>
           ))}
         </div>
 
-        <p className="mt-6 xl:mr-20">{description}</p>
+        <p className="mt-6 xl:mr-20">{`${description}`}</p>
 
         <h3 className="mt-6 font-medium text-brand">CONNECT WITH US</h3>
         <div className="flex gap-4 mt-2">
@@ -133,15 +137,3 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
 };
 
 export default BrandsPageCard;
-
-{
-  /* <p>
-          The brand is known for its Napoleon cognac, which is a blend of Grande
-          Champagne and Borderies eaux-de-vie. Courvoisier is also known for its
-          association with the French emperor Napoleon Bonaparte, who was a fan
-          of the brand. The brand&apos;s iconic logo features Napoleon&apos;s
-          imperial emblem, the eagle. Courvoisier is a popular choice for
-          cocktails and is often used in classic recipes such as the Sidecar and
-          the French 75.
-        </p> */
-}

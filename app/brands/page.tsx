@@ -1,65 +1,81 @@
 import PageHeader from "@/components/PageHeader/PageHeader";
 import BrandsPageCard from "@/components/OurBrands/BrandsPageCard";
 import Footer from "@/components/Footer/Footer";
-import teeling from "@/assets/teeling1.jpg";
+import teelingSmallBatch from "@/public/images/teelingSmallBatch.jpg";
+import teelingSingleGrain from "@/public/images/teelingSingleGrain.jpg";
+import teelingSingleMalt from "@/public/images/teelingSingleMalt.png";
+import teelingBlackpitts from "@/public/images/TeelingBlackpitts.jpg";
 import teeling2 from "@/assets/teeling2.webp";
 import teeling3 from "@/assets/teeling2.jpg";
-import neft from "@/assets/neft1.jpg";
-import neft2 from "@/assets/neft.jpg";
-import neft3 from "@/assets/neft-hero.png";
-import padreAzul from "@/assets/padre-azul.webp";
-import padreAzul1 from "@/assets/padreAzul1.jpeg";
-import padreAzul2 from "@/assets/padreAzul2.jpeg";
-import courvoisier1 from "@/assets/Courvoisier1.jpg";
-import courvoisier2 from "@/assets/Courvoisier2.jpg";
-import courvoisier3 from "@/assets/Courvoisier-Logo.jpg";
-import bisquit1 from "@/assets/BisquitDubouche1.jpg";
-import bisquit2 from "@/assets/BisquitDuboucheLogo.jpg";
-import bisquit3 from "@/assets/BisquitDubouche1.jpg";
-import buenAmigo1 from "@/assets/buenAmigo1.jpg";
-import buenAmigo2 from "@/assets/Courvoisier2.jpg";
-import buenAmigo3 from "@/assets/buenAmigo1.jpg";
+import neftBlack from "@/public/images/neftBlack.jpg";
+import neftWhite from "@/public/images/neftWhite.jpg";
+
+import padreAzulBlanco from "@/public/images/padreAzulBlanco.png";
+import padreAzulReposado from "@/public/images/padreAzulReposado.png";
+import padreAzulAnejo from "@/public/images/padreAzulAnejo.png";
+import courvoisierVSOP from "@/public/images/courvoisierVSOP.webp";
+import courvoisierXO from "@/public/images/courvoisierXO.webp";
+import courvoisierVS from "@/public/images/courvoisierVS.webp";
+import bisquitVSOP from "@/public/images/b&DVSOP.jpg";
+import bisquitXO from "@/public/images/b&DXO.jpg";
+import buenAmigoGold from "@/public/images/buenAmigo2.jpg";
+import buenAmigoSilver from "@/public/images/beunAmigo.jpg";
+import buenAmigoCoffee from "@/public/images/buenAmigoCoffee.jpg";
 import Banner from "@/components/Banner/Banner";
 const brands = [
   {
-    images: [teeling, teeling2, teeling3],
-    title: "Teeling",
-    variations: ["VS", "VSOP"],
+    images: [
+      teelingSmallBatch,
+      teelingSingleGrain,
+      teelingSingleMalt,
+      teelingBlackpitts,
+      teeling2,
+      teeling3,
+    ],
+    title: "Teeling Whiskey",
+    variations: [
+      "SMALL BATCH",
+      "SINGLE GRAIN",
+      "SINGLE MALT",
+      "BLACKPITTS PEATED SINGLE MALT",
+      "21 YO RISING RESERVE",
+      "30 YO SINGLE MALT",
+    ],
     description:
-      "Hine is celebrated for its elegant cognacs that blend tradition with modernity, offering a sophisticated taste.",
+      "Since 1782 the Teeling family have been craftingIrish whiskey. The Teelings are renowned for their vision in doing things differently and their whiskeys embody this entrepreneurial spirit. 2015 marked the year a new generation of Teelings returned to their distilling roots in the Liberties are of Dublin City. We're DUBLIN DISTILLERY and DUBLIN is where we do things differently. Innovation is in the fabric of our city and family, and in all things we do, we dare to be different. THE TEELING UNCONVENTIONAL COLLECTION is a celebration of this spirit of innovation, offering five wholly unique expressions of IRISH WHISKEY.",
   },
   {
-    images: [courvoisier1, courvoisier2, courvoisier3],
+    images: [courvoisierVSOP, courvoisierXO, courvoisierVS],
     title: "Courvoisier",
-    variations: ["VS", "VSOP", "XO"],
+    variations: ["VSOP", "XO", "VS"],
     description:
       "Courvoisier is a brand of cognac owned by Beam Suntory, a subsidiary of Suntory Holdings of Osaka, Japan. The production is based in Jarnac, Charente in France. Courvoisier sources its eaux-de-vie from the Fins Bois, Petit Champagne, and Grande Champagne crus. The distillation of the cognac is carried out in pot stills and the distilled spirit is aged in French Limousin oak barrels. Courvoisier offers a range of cognacs including VS, VSOP, XO, and Initiale Extra",
   },
   {
-    images: [bisquit1, bisquit2, bisquit3],
+    images: [bisquitVSOP, bisquitXO],
     title: "Bisquit & Dubouche",
-    variations: ["VS", "VSOP", "XO"],
+    variations: ["VSOP", "XO"],
     description:
       "Bisquit & Dubouche is a French cognac house founded in 1819 by Alexandre Bisquit. The brand is known for its Napoleon cognac, which is a blend of Grande Champagne and Borderies eaux-de-vie. Courvoisier is also known for its association with the French emperor Napoleon Bonaparte, who was a fan of the brand's cognac. Bisquit & Dubouche offers a range of cognacs including VS, VSOP, and XO. The brand's cognacs are crafted using traditional methods and aged in oak barrels to enhance their flavor and aroma.",
   },
   {
-    images: [buenAmigo1, buenAmigo2, buenAmigo3],
+    images: [buenAmigoCoffee, buenAmigoSilver, buenAmigoGold],
     title: "Buen Amigo Tequila",
-    variations: ["VSOP", "XO", "Louis XIII"],
+    variations: ["COFFEE", "SILVER", "GOLD"],
     description:
       "Buen Amigo is a premium tequila brand that offers a range of tequilas, including blanco, reposado, and añejo. The brand is known for its smooth and refined taste, making it a popular choice among tequila connoisseurs. Buen Amigo tequilas are crafted using traditional methods and aged in oak barrels to enhance their flavor and aroma. The brand's tequilas are perfect for sipping neat or mixing in cocktails.",
   },
   {
-    images: [neft, neft2, neft3],
+    images: [neftBlack, neftWhite],
     title: "Neft Vodka",
-    variations: ["VS", "VSOP", "XO"],
+    variations: ["BLACK", "WHITE"],
     description:
-      "Neft is a premium vodka brand that offers a range of vodkas, including classic, flavored, and ultra-premium options. The brand is known for its high-quality ingredients and unique distillation process, which results in a smooth and clean taste. Neft vodkas are crafted using pure Austrian spring water and organic wheat, giving them a distinct flavor profile that sets them apart from other vodkas on the market. The brand's vodkas are perfect for sipping neat or mixing in cocktails.",
+      "Neft is a premium vodka brand that offers a range of vodkas, including classic, flavored, and ultra-premium options. The brand is known for its high-quality ingredients and unique distillation process, which results in a smooth and clean taste. Neft vodkas are crafted using pure Austrian spring water and organic wheat, giving them a distinct flavor profile and a natural, slightly sweet finish that sets them apart from other vodkas on the market. The brand's vodkas are perfect for sipping neat or mixing in cocktails.",
   },
   {
-    images: [padreAzul, padreAzul1, padreAzul2],
+    images: [padreAzulBlanco, padreAzulReposado, padreAzulAnejo],
     title: "Padre Azul",
-    variations: ["VSOP", "XO"],
+    variations: ["BLANCO", "REPOSADO", "ANEJO"],
     description:
       "Padre Azul is a premium tequila brand that offers a range of tequilas, including blanco, reposado, and añejo. The brand is known for its smooth and refined taste, making it a popular choice among tequila connoisseurs. Padre Azul tequilas are crafted using traditional methods and aged in oak barrels to enhance their flavor and aroma. The brand's tequilas are perfect for sipping neat or mixing in cocktails.",
   },
