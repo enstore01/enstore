@@ -50,7 +50,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
         reverse ? "lg:flex-row-reverse" : ""
       }`}
     >
-      <div className="lg:w-1/2 relative rounded-lg overflow-hidden h-[300px] md:h-[400px]">
+      <div className="lg:w-1/2 relative rounded-lg overflow-hidden h-[300px] md:h-[500px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentImageIndex}
@@ -64,7 +64,8 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
               src={images[currentImageIndex]}
               alt={`Courvoisier image ${currentImageIndex + 1}`}
               fill
-              className="object-cover"
+              // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              // className="object-cover"
               priority
             />
           </motion.div>
