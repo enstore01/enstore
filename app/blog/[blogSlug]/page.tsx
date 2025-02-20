@@ -8,13 +8,21 @@ import { PortableText } from "next-sanity";
 export default async function BlogPost({
   params,
 }: {
-  params: { blogSlug: string };
+  params: Promise<{ blogSlug: string }>;
 }) {
-  const post = await getPost(params.blogSlug);
+  const resolvedParams = await params; // Await the params
+
+  const post = await getPost(resolvedParams.blogSlug);
 
   if (!post) {
     notFound();
   }
+
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <>
@@ -22,7 +30,7 @@ export default async function BlogPost({
         {/* Header */}
         <div className="mb-8">
           <div className="flex justify-between items-center text-[14px] text-gold mb-4">
-            <span className="py-1">{post.publishedAt}</span>
+            <span className="py-1">{formattedDate}</span>
             <span className="border py-1 px-2 border-gold rounded-full">
               {post.categories}
             </span>
