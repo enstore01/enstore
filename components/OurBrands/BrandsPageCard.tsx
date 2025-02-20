@@ -7,11 +7,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
+  // Facebook,
+  // Twitter,
+  // Instagram,
+  // Linkedin,
+  // Youtube,
 } from "lucide-react";
 import { StaticImageData } from "next/image";
 
@@ -19,7 +19,7 @@ export interface BrandsPageCardProps {
   images: StaticImageData[]; // Array of images for the carousel
   title: string;
   variations: string[]; // e.g. ["VS", "VSOP", "XO"]
-  description: string;
+  description: string[];
   reverse: boolean;
 }
 
@@ -112,9 +112,9 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
           ))}
         </div>
 
-        <p className="mt-6 xl:mr-20">{`${description}`}</p>
+        <p className="mt-6 xl:mr-20">{`${description[currentImageIndex]}`}</p>
 
-        <h3 className="mt-6 font-medium text-brand">CONNECT WITH US</h3>
+        {/* <h3 className="mt-6 font-medium text-brand">CONNECT WITH US</h3>
         <div className="flex gap-4 mt-2">
           <a href="#" aria-label="Facebook" className="hover:text-brand">
             <Facebook size={24} className="transition" />
@@ -131,7 +131,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
           <a href="#" aria-label="YouTube" className="hover:text-brand">
             <Youtube size={24} className="transition" />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
