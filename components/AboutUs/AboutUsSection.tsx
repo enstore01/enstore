@@ -1,26 +1,24 @@
-// "use client";
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import aboutPic from "@/public/images/IMG_3729.jpg";
 
 const AboutUsSection = () => {
-  // const scrollToManagement = () => {
-  //   const section = document.getElementById("management");
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-
   return (
     <section className="py-8 bg-light">
       <div className="container">
         <div className="md:flex items-center justify-between">
-          <div className="md:w-[45%] font-poppins">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="md:w-[45%] font-poppins"
+          >
             <div>
               <h2 className="top-header">We Are Enstore</h2>
             </div>
-            {/* <p className="text-brand font-medium tracking-tight">
-              Only the best....
-            </p> */}
+
             <p className="text-primary mt-6 tracking-tight">
               At Enstore, we are passionate about delivering the finest
               selection of premium wines and spirits to Nigeria’s insightful
@@ -42,21 +40,21 @@ const AboutUsSection = () => {
               Through strategic distribution, innovative marketing, and
               educational initiatives, we ensure that every sip of our brands
               reflects authenticity, sophistication, and enjoyment. Whether
-              you&apos;re savoring a classic whiskey neat, toasting with a
-              refined cognac, or enjoying a handcrafted cocktail, Enstore
-              Nigeria Ltd is dedicated to bringing the world’s finest spirits to
-              your glass.Experience Excellence. Enjoy the Finest.
+              you&apos;re savoring a classic whiskey, toasting with a refined
+              cognac, or enjoying a handcrafted cocktail, Enstore Nigeria Ltd is
+              dedicated to bringing the world’s finest spirits to your
+              glass.Experience Excellence. Enjoy the Finest.
             </p>
-            {/* <button
-              onClick={scrollToManagement}
-              className="btn btn-primary mt-6"
-            >
-              Our Management
-            </button> */}
-          </div>
-          <div className="md:w-[45%] rounded-md  overflow-hidden mt-4 xl:p-10">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            className="md:w-[45%] rounded-md overflow-hidden mt-4 xl:p-10"
+          >
             <Image src={aboutPic} alt="drinks" className="rounded-md" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

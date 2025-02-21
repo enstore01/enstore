@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import OurManagementCard from "./OurManagementCard";
 import managementImage1 from "@/assets/team1.jpg";
 import managementImage2 from "@/assets/team2.jpg";
@@ -47,14 +49,21 @@ const OurManagementSection = () => {
         </div>
         <div className="flex flex-wrap gap-6 justify-center py-10">
           {dummyManagement.map((member, index) => (
-            <OurManagementCard
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
               key={index}
-              image={member.image}
-              title={member.title}
-              name={member.name}
-              description={member.description}
-              link={member.link}
-            />
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <OurManagementCard
+                image={member.image}
+                title={member.title}
+                name={member.name}
+                description={member.description}
+                link={member.link}
+              />
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,12 +1,12 @@
 import PageHeader from "@/components/PageHeader/PageHeader";
 import BrandsPageCard from "@/components/OurBrands/BrandsPageCard";
 import Footer from "@/components/Footer/Footer";
-import teelingSmallBatch from "@/assets/teelingSmallBatch.jpg";
+import teelingSmallBatch from "@/public/images/teelingSmallBatch2.jpg";
 import teelingSingleGrain from "@/public/images/teelingSingleGrain.jpg";
 import teelingSingleMalt from "@/public/images/teelingSingleMalt.png";
 import teelingBlackpitts from "@/public/images/TeelingBlackpitts.jpg";
-import teeling2 from "@/assets/teeling2.webp";
-import teeling3 from "@/assets/teeling2.jpg";
+import teeling21YO from "@/public/images/TeelingWhiskeyRising21YO.jpg";
+import teeling30YO from "@/public/images/30yo70boxbar.jpg";
 import neftBlack from "@/public/images/neftBlack.jpg";
 import neftWhite from "@/public/images/neftWhite.jpg";
 import padreAzulBlanco from "@/public/images/padreAzulBlanco.png";
@@ -15,8 +15,8 @@ import padreAzulAnejo from "@/public/images/padreAzulAnejo.png";
 import courvoisierVSOP from "@/public/images/courvoisierVSOP.webp";
 import courvoisierXO from "@/public/images/courvoisierXO.webp";
 import courvoisierVS from "@/public/images/courvoisierVS.webp";
-import bisquitVSOP from "@/public/images/b&DVSOP.jpg";
-import bisquitXO from "@/public/images/b&DXO.jpg";
+import bisquitVSOP from "@/public/images/Bisquit&DuboucheVSOP.webp";
+import bisquitXO from "@/public/images/Bisquit&DuboucheXO.webp";
 import buenAmigoGold from "@/public/images/buenAmigo2.jpg";
 import buenAmigoSilver from "@/public/images/beunAmigo.jpg";
 import buenAmigoCoffee from "@/public/images/buenAmigoCoffee.jpg";
@@ -28,8 +28,8 @@ const brands = [
       teelingSingleGrain,
       teelingSingleMalt,
       teelingBlackpitts,
-      teeling2,
-      teeling3,
+      teeling21YO,
+      teeling30YO,
     ],
     title: "Teeling Whiskey",
     variations: [
@@ -103,7 +103,7 @@ const OurBrandsPage = () => {
   return (
     <div>
       <PageHeader
-        src="https://media.istockphoto.com/id/1144881204/photo/neck-of-wine-bottles-in-a-liquor-store-in-europe.webp?a=1&b=1&s=612x612&w=0&k=20&c=spDt6fEOb2sd-UTbMzUIIGQGjgOMzNydwu4Xc2aaPEs="
+        src="/images/IMG_3730.jpg"
         title="Our Brands"
         description="We offer a variety of premium wines and spirits that cater to different tastes and occasions."
       />

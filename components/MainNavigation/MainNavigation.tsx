@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import logo from "@/assets/Logo.png";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const MainNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,8 +17,15 @@ const MainNavigation = () => {
   return (
     <header className="sticky top-0 left-0  z-20 bg-light shadow-md">
       <div className="container relative">
-        <div className="flex items-center justify-between p-4">
-          <Image src={logo} alt="Enstore logo" width={120} />
+        <div className="flex items-center justify-between px-4 pt-6 pb-2 md:pb-0">
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="Enstore logo"
+              width={120}
+              className="cursor-pointer"
+            />
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -29,16 +38,36 @@ const MainNavigation = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex xl:w-1/2 lg:text-[18px] font-medium gap-6 items-center text-navy">
-            <Link href="/" className="p-4">
+            <Link
+              href="/"
+              className={`px-4 py-2 border-b-4 ${
+                pathname === "/" ? "border-brand" : "border-transparent"
+              } transition-all duration-200`}
+            >
               Home
             </Link>
-            <Link href="/brands" className="p-4">
+            <Link
+              href="/brands"
+              className={`px-4 py-2 border-b-4 ${
+                pathname === "/brands" ? "border-brand" : "border-transparent"
+              } transition-all duration-200`}
+            >
               Our Brands
             </Link>
-            <Link href="/blog" className="p-4">
+            <Link
+              href="/blog"
+              className={`px-4 py-2 border-b-4 ${
+                pathname === "/blog" ? "border-brand" : "border-transparent"
+              } transition-all duration-200`}
+            >
               Blog
             </Link>
-            <Link href="/careers" className="p-4">
+            <Link
+              href="/careers"
+              className={`px-4 py-2 border-b-4 ${
+                pathname === "/careers" ? "border-brand" : "border-transparent"
+              } transition-all duration-200`}
+            >
               Careers
             </Link>
           </nav>

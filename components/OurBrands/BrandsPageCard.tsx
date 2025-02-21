@@ -4,15 +4,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ChevronLeft,
-  ChevronRight,
-  // Facebook,
-  // Twitter,
-  // Instagram,
-  // Linkedin,
-  // Youtube,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { StaticImageData } from "next/image";
 
 export interface BrandsPageCardProps {
@@ -111,27 +103,18 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
             </span>
           ))}
         </div>
-
-        <p className="mt-6 xl:mr-20">{`${description[currentImageIndex]}`}</p>
-
-        {/* <h3 className="mt-6 font-medium text-brand">CONNECT WITH US</h3>
-        <div className="flex gap-4 mt-2">
-          <a href="#" aria-label="Facebook" className="hover:text-brand">
-            <Facebook size={24} className="transition" />
-          </a>
-          <a href="#" aria-label="Twitter" className="hover:text-brand">
-            <Twitter size={24} className="transition" />
-          </a>
-          <a href="#" aria-label="Instagram" className="hover:text-brand">
-            <Instagram size={24} className="transition" />
-          </a>
-          <a href="#" aria-label="LinkedIn" className="hover:text-brand">
-            <Linkedin size={24} className="transition" />
-          </a>
-          <a href="#" aria-label="YouTube" className="hover:text-brand">
-            <Youtube size={24} className="transition" />
-          </a>
-        </div> */}
+        <p className="mt-6 xl:mr-20">
+          <motion.span
+            key={currentImageIndex} // Ensures re-animation on text change
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {description[currentImageIndex]}
+          </motion.span>
+        </p>
+        {/* <p className="mt-6 xl:mr-20">{`${description[currentImageIndex]}`}</p> */}
       </div>
     </div>
   );
