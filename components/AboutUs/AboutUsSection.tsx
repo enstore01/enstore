@@ -3,17 +3,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import aboutPic from "@/public/images/IMG_3729.jpg";
 
-const AboutUsSection = () => {
+const AboutUsSection: React.FC = () => {
   return (
-    <section className="py-8 bg-light">
+    <section className="py-8 bg-light " aria-label="About Us">
       <div className="container">
-        <div className="md:flex items-center justify-between">
+        <div className="md:flex items-center justify-between gap-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="md:w-[45%] font-poppins"
+            className="md:w-[45%] font-poppins space-y-6"
           >
             <div>
               <h2 className="top-header">We Are Enstore</h2>
@@ -26,15 +26,17 @@ const AboutUsSection = () => {
               sales, and distribution company committed to sourcing the most
               unique, innovative and premium brand companies making fresh entry
               into the booming Nigerian market.
-              <br />
-              <br />
+            </p>
+
+            <p className="text-primary tracking-tight">
               We curate a world-class portfolio of internationally renowned
               brands, ensuring that every bottle we distribute represents
               quality, craftsmanship, and heritage. With a deep understanding of
-              Nigeria’s dynamic beverage market, we are committed to elevating
-              the drinking experience by offering a diverse range of exceptional
-              spirits, including Teeling Whiskey, NEFT Vodka, Tequila Buen
-              Amigo, Padre Azul, Bisquit & Dubouché Cognac, and Courvoisier.
+              Nigeria&apos;s dynamic beverage market, we are committed to
+              elevating the drinking experience by offering a diverse range of
+              exceptional spirits, including Teeling Whiskey, NEFT Vodka,
+              Tequila Buen Amigo, Padre Azul, Bisquit & Dubouché Cognac, and
+              Courvoisier.
             </p>
             <p className="hidden xl:block text-primary mt-2 tracking-tight lg:pr-10">
               Through strategic distribution, innovative marketing, and
@@ -51,9 +53,16 @@ const AboutUsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="md:w-[45%] rounded-md overflow-hidden mt-4 xl:p-10"
+            className="md:w-[45%] rounded-md overflow-hidden mt-8 md:mt-20 xl:p-10"
           >
-            <Image src={aboutPic} alt="drinks" className="rounded-md" />
+            <Image
+              src={aboutPic}
+              alt="Enstore premium drinks collection"
+              className="rounded-md object-cover"
+              priority
+              quality={90}
+              placeholder="blur"
+            />
           </motion.div>
         </div>
       </div>

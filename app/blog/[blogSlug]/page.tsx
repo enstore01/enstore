@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import { notFound } from "next/navigation";
 import { getPost } from "@/sanity/lib/client";
 import { PortableText } from "next-sanity";
+import ShareButton from "@/components/ShareButton/ShareButton";
 
 export default async function BlogPost({
   params,
@@ -46,7 +47,7 @@ export default async function BlogPost({
             src={post.mainImage}
             alt={post.title}
             fill
-            className="rounded-lg object-cover"
+            className="rounded-lg object-contain"
             sizes="(max-width: 1200px) 100vw, 1200px"
             priority
           />
@@ -64,12 +65,42 @@ export default async function BlogPost({
                       {children}
                     </p>
                   ),
+                  h2: ({ children }) => (
+                    <h2 className="text-2xl font-semibold mt-8 mb-4">
+                      {children}
+                    </h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="text-xl font-semibold mt-6 mb-3">
+                      {children}
+                    </h3>
+                  ),
+                },
+                list: {
+                  bullet: ({ children }) => (
+                    <ul className="list-disc pl-6 mb-6">{children}</ul>
+                  ),
+                },
+                marks: {
+                  link: ({ children, value }) => (
+                    <a
+                      href={value.href}
+                      className="text-brand hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {children}
+                    </a>
+                  ),
                 },
               }}
             />
           )}
         </div>
-
+        <div className="flex gap-4 mt-8 border-t pt-8">
+          <h3 className="text-gray-600">Share this article:</h3>
+          <ShareButton title={post.title} description={post.description} />
+        </div>
         {/* Back Link */}
         <Link
           href="/blog"
@@ -81,4 +112,19 @@ export default async function BlogPost({
       <Footer />
     </>
   );
+}
+export async function generateMetadata({
+  params,
+}: {
+  params: { blogSlug: string };
+}) {
+  const post = await getPost(params.blogSlug);
+
+  return {
+    title: `${post?.title} | Enstore Blog`,
+    description: post?.description || post?.title,
+    openGraph: {
+      images: [post?.mainImage],
+    },
+  };
 }

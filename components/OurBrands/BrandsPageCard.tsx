@@ -22,17 +22,17 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
   description,
   reverse,
 }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    if (currentImageIndex > 0) {
-      setCurrentImageIndex(currentImageIndex - 1);
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
     }
   };
 
   const handleNext = () => {
-    if (currentImageIndex < images.length - 1) {
-      setCurrentImageIndex(currentImageIndex + 1);
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex(currentIndex + 1);
     }
   };
 
@@ -45,7 +45,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
       <div className="lg:w-1/2 relative rounded-lg overflow-hidden h-[300px] md:h-[500px]">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentImageIndex}
+            key={currentIndex}
             initial={{ opacity: 0.5, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0.5, x: -50 }}
@@ -53,11 +53,11 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
             className="absolute inset-0"
           >
             <Image
-              src={images[currentImageIndex]}
-              alt={`Courvoisier image ${currentImageIndex + 1}`}
+              src={images[currentIndex]}
+              alt={`Courvoisier image ${currentIndex + 1}`}
               fill
-              // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              // className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain"
               priority
             />
           </motion.div>
@@ -66,10 +66,10 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
         <div className="absolute inset-0 flex justify-between items-center px-4">
           <button
             onClick={handlePrev}
-            disabled={currentImageIndex === 0}
+            disabled={currentIndex === 0}
             aria-label="Previous image"
             className={`bg-black bg-opacity-50 text-white p-2 rounded-full transition ${
-              currentImageIndex === 0
+              currentIndex === 0
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-opacity-75"
             }`}
@@ -78,10 +78,10 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
           </button>
           <button
             onClick={handleNext}
-            disabled={currentImageIndex === images.length - 1}
+            disabled={currentIndex === images.length - 1}
             aria-label="Next image"
             className={`bg-black bg-opacity-50 text-white p-2 rounded-full transition ${
-              currentImageIndex === images.length - 1
+              currentIndex === images.length - 1
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-opacity-75"
             }`}
@@ -92,29 +92,48 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
       </div>
       <div className="lg:w-1/2 lg:pl-8 mt-6 lg:mt-0 p-4">
         <h2 className="top-header mt-0 pb-3">{title}</h2>
-        <div className="flex flex-wrap gap-2 mt-2 font-semibold items-center text-gold ml-1">
+        <div className="flex flex-wrap gap-2 mt-2 font-semibold items-center text-[#2b2d42] ml-1">
           {variations.map((variation, index) => (
-            <span
+            <button
               key={index}
-              className={`px-2 border border-gold rounded-md cursor-pointer ${currentImageIndex === index ? "bg-brand text-light border-none" : ""}`}
-              onClick={() => setCurrentImageIndex(index)}
+              role="tab"
+              aria-selected={currentIndex === index}
+              aria-controls={`${title}-${variation}-panel`}
+              className={`px-2 py-1 border border-gold rounded-md transition-all hover:bg-brand/10 focus:outline-none focus:ring-2 focus:ring-brand ${
+                currentIndex === index ? "bg-brand text-light border-none" : ""
+              }`}
+              onClick={() => setCurrentIndex(index)}
             >
               {variation}
-            </span>
+            </button>
           ))}
         </div>
         <p className="mt-6 xl:mr-20">
           <motion.span
-            key={currentImageIndex} // Ensures re-animation on text change
+            key={currentIndex} // Ensures re-animation on text change
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {description[currentImageIndex]}
+            {description[currentIndex]}
           </motion.span>
         </p>
-        {/* <p className="mt-6 xl:mr-20">{`${description[currentImageIndex]}`}</p> */}
+        {/* Navigation Dots */}
+        <div className="flex justify-start gap-2 mt-6">
+          {variations.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`View ${variations[index]} details`}
+              className={`w-2 h-2 rounded-full transition-all ${
+                currentIndex === index
+                  ? "bg-brand w-6"
+                  : "bg-gray-300 hover:bg-gray-400"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

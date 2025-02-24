@@ -1,15 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-[85vh]">
+    <section
+      className="relative w-full h-[85vh]"
+      aria-label="Hero section with video background"
+    >
       {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
+        poster="/images/hero4.jpg" // Add a poster image while video loads
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/video/POUR.mp4" type="video/mp4" />
@@ -46,50 +51,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-// const Hero = () => {
-//   return (
-//     <section
-//       className="relative py-8 bg-cover bg-center bg-no-repeat h-[85vh] flex justify-center items-center"
-//       style={{
-//         backgroundImage: "url('/images/hero4.jpg')", // Make sure this path is correct
-//       }}
-//     >
-//       {/* Dark overlay */}
-//       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-//       <div className="container z-10">
-//         <div className="text-center lg:w-1/2 mx-auto">
-//           <h1 className="text-5xl xl:text-7xl font-bold tracking-tighter bg-gradient-to-b from-light to-white bg-clip-text text-transparent mt-6">
-//             Discover the World of Premium Wines & Spirits
-//           </h1>
-//           <p className="text-xl text-white mt-6 tracking-tight">
-//             Global icon in premium wines and spirits, crafting legendary brands
-//             that celebrate excellence and bring people together.
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;
-
-{
-  /* <div className="mt-20 md:mt-0 md:w-[45%]">
-            <Image src={neft} alt="Neft Vodka" className="w-full" priority />
-          </div> */
-}
-
-{
-  /* <motion.img
-src={neft.src}
-alt="Neft Vodka"
-className="w-full"
-animate={{ translateY: [-30, 30] }}
-transition={{
-  repeat: Infinity,
-  repeatType: "mirror",
-  duration: 2,
-  ease: "easeInOut",
-}} */
-}

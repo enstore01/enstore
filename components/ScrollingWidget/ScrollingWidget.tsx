@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import teelingLogo from "@/assets/teelingLogo.svg";
 import neftLogo from "@/assets/NeftLogo.png";
 import courvoisierLogo from "@/assets/Courvoisier-Logo.jpg";
@@ -9,7 +9,12 @@ import padreAzul from "@/assets/padre-azul.webp";
 
 import { motion } from "framer-motion";
 
-const brandLogos = [
+interface BrandLogo {
+  src: StaticImageData;
+  alt: string;
+}
+
+const brandLogos: BrandLogo[] = [
   { src: teelingLogo, alt: "Teeling Whiskey" },
   { src: neftLogo, alt: "Neft Vodka" },
   { src: courvoisierLogo, alt: "Courvoisier Cognac" },
@@ -40,8 +45,11 @@ const ScrollingWidget = () => {
                   src={brand.src}
                   alt={brand.alt}
                   width={120}
-                  height={80}
                   className="object-contain"
+                  loading="lazy"
+                  onError={e => {
+                    e.currentTarget.style.display = "none";
+                  }}
                 />
               </div>
             ))}

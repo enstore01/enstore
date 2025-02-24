@@ -9,7 +9,15 @@ import courvoisier1 from "@/public/images/courvoisier4.jpg";
 import bisquit1 from "@/assets/BisquitDubouche1.jpg";
 import buenAmigo1 from "@/public/images/beunAmigo.jpg";
 
-const brands = [
+import { StaticImageData } from "next/image";
+
+interface Brand {
+  image: StaticImageData;
+  title: string;
+  description: string;
+}
+
+const brands: Brand[] = [
   {
     image: teeling2,
     title: "Teeling Whiskey",
@@ -49,7 +57,7 @@ const brands = [
   },
 ];
 
-const OurBrandsSection = () => {
+const OurBrandsSection: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -107,8 +115,9 @@ const OurBrandsSection = () => {
           {showLeftArrow && (
             <button
               aria-label="Scroll left"
-              className="absolute left-0 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+              className="absolute left-0 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-all focus:outline-none focus:ring-2 focus:ring-brand disabled:opacity-50"
               onClick={() => scroll("left")}
+              disabled={!showLeftArrow}
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
@@ -117,6 +126,8 @@ const OurBrandsSection = () => {
           <div
             ref={carouselRef}
             className="mt-10 flex gap-6 overflow-x-auto justify-start snap-x scrollbar-hide scroll-smooth"
+            role="region"
+            aria-label="Brands carousel"
           >
             {brands.map((brand, index) => (
               <BrandCard key={index} {...brand} />
@@ -126,8 +137,9 @@ const OurBrandsSection = () => {
           {showRightArrow && (
             <button
               aria-label="Scroll right"
-              className="absolute right-0 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+              className="absolute right-0 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-all focus:outline-none focus:ring-2 focus:ring-brand disabled:opacity-50"
               onClick={() => scroll("right")}
+              disabled={!showRightArrow}
             >
               <ChevronRight className="w-8 h-8" />
             </button>

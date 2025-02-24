@@ -6,16 +6,33 @@ import logo from "@/assets/Logo.png";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+const navLinks: NavLink[] = [
+  { href: "/", label: "Home" },
+  { href: "/brands", label: "Our Brands" },
+  { href: "/blog", label: "Blog" },
+  { href: "/careers", label: "Careers" },
+];
+
 const MainNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  const getLinkClassName = (href: string) => `
+    px-4 py-2 border-b-4 ${
+      pathname === href ? "border-brand" : "border-transparent"
+    } transition-all duration-200
+  `;
+
   return (
-    <header className="sticky top-0 left-0  z-20 bg-light shadow-md">
+    <header className="sticky top-0 left-0 z-20 bg-light shadow-md">
       <div className="container relative">
         <div className="flex items-center justify-between px-4 pt-6 pb-2 md:pb-0">
           <Link href="/">
@@ -23,7 +40,10 @@ const MainNavigation = () => {
               src={logo}
               alt="Enstore logo"
               width={120}
+              height={21} // 120 * (71/416) ≈ 21
               className="cursor-pointer"
+              priority
+              quality={100}
             />
           </Link>
 
@@ -38,47 +58,20 @@ const MainNavigation = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex xl:w-1/2 lg:text-[18px] font-medium gap-6 items-center text-navy">
-            <Link
-              href="/"
-              className={`px-4 py-2 border-b-4 ${
-                pathname === "/" ? "border-brand" : "border-transparent"
-              } transition-all duration-200`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/brands"
-              className={`px-4 py-2 border-b-4 ${
-                pathname === "/brands" ? "border-brand" : "border-transparent"
-              } transition-all duration-200`}
-            >
-              Our Brands
-            </Link>
-            <Link
-              href="/blog"
-              className={`px-4 py-2 border-b-4 ${
-                pathname === "/blog" ? "border-brand" : "border-transparent"
-              } transition-all duration-200`}
-            >
-              Blog
-            </Link>
-            <Link
-              href="/careers"
-              className={`px-4 py-2 border-b-4 ${
-                pathname === "/careers" ? "border-brand" : "border-transparent"
-              } transition-all duration-200`}
-            >
-              Careers
-            </Link>
+            {navLinks.map(({ href, label }) => (
+              <Link key={href} href={href} className={getLinkClassName(href)}>
+                {label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
 
-      {/* Backdrop (Closes Menu on Click) */}
+      {/* Backdrop */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={closeMenu} // Clicking outside closes menu
+          onClick={closeMenu}
         ></div>
       )}
 
@@ -97,18 +90,11 @@ const MainNavigation = () => {
         </button>
 
         <nav className="flex flex-col gap-6 font-semibold mt-16 text-navy text-lg p-6">
-          <Link href="/" className="p-2" onClick={closeMenu}>
-            Home
-          </Link>
-          <Link href="/brands" className="p-2" onClick={closeMenu}>
-            Our Brands
-          </Link>
-          <Link href="/blog" className="p-2" onClick={closeMenu}>
-            Blog
-          </Link>
-          <Link href="/careers" className="p-2" onClick={closeMenu}>
-            Careers
-          </Link>
+          {navLinks.map(({ href, label }) => (
+            <Link key={href} href={href} className="p-2" onClick={closeMenu}>
+              {label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
