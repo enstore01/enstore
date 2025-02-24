@@ -116,9 +116,11 @@ export default async function BlogPost({
 export async function generateMetadata({
   params,
 }: {
-  params: { blogSlug: string };
+  params: Promise<{ blogSlug: string }>;
 }) {
-  const post = await getPost(params.blogSlug);
+  const resolvedParams = await params; // Await the params
+
+  const post = await getPost(resolvedParams.blogSlug);
 
   return {
     title: `${post?.title} | Enstore Blog`,
