@@ -13,7 +13,7 @@ const AboutUsSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="md:w-[45%] font-poppins space-y-6"
+            className="md:w-[45%] font-poppins space-y-6 text-justify"
           >
             <div>
               <h2 className="top-header">We Are Enstore</h2>
@@ -44,8 +44,8 @@ const AboutUsSection: React.FC = () => {
               reflects authenticity, sophistication, and enjoyment. Whether
               you&apos;re savoring a classic whiskey, toasting with a refined
               cognac, or enjoying a handcrafted cocktail, Enstore Nigeria Ltd is
-              dedicated to bringing the world’s finest spirits to your
-              glass.Experience Excellence. Enjoy the Finest.
+              dedicated to bringing the world’s finest spirits to your glass.
+              Experience Excellence. Enjoy the Finest.
             </p>
           </motion.div>
           <motion.div

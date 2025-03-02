@@ -8,6 +8,9 @@ interface BrandCardProps {
 }
 
 const BrandCard: React.FC<BrandCardProps> = ({ image, title, description }) => {
+  // Create a URL-friendly ID from the title
+  const brandId = title.toLowerCase().replace(/\s+|&/g, "-");
+
   return (
     <div className="bg-light shadow-lg rounded overflow-hidden w-[300px] sm:w-[330px] flex-none snap-start mt-10 border">
       {/* Image */}
@@ -18,6 +21,8 @@ const BrandCard: React.FC<BrandCardProps> = ({ image, title, description }) => {
           fill
           className="rounded-t"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          loading="lazy"
+          quality={85}
         />
       </div>
 
@@ -27,7 +32,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ image, title, description }) => {
         <p className="text-gray-600 mt-2">{description}</p>
 
         {/* Learn More Button */}
-        <Link href={"/brands"}>
+        <Link href={`/brands#${brandId}`}>
           <button className="mt-4 text-navy font-medium underline hover:text-brand">
             Learn More
           </button>

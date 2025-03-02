@@ -22,6 +22,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
   description,
   reverse,
 }) => {
+  const brandId = title.toLowerCase().replace(/\s+|&/g, "-");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -38,6 +39,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
 
   return (
     <div
+      id={brandId}
       className={`flex flex-col lg:flex-row mt-20 bg-light shadow p-4 ${
         reverse ? "lg:flex-row-reverse" : ""
       }`}
@@ -108,7 +110,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
             </button>
           ))}
         </div>
-        <p className="mt-6 xl:mr-20">
+        <p className="mt-6 text-justify xl:mr-20">
           <motion.span
             key={currentIndex} // Ensures re-animation on text change
             initial={{ opacity: 0 }}

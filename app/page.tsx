@@ -23,7 +23,7 @@ export default async function Home() {
       <Banner
         title="A Curated Selection for Every Connoisseur & Enthusiast"
         src="/images/hero4.jpg"
-        description="From smooth Irish whiskeys to bold tequilas and luxurious cognacs, our brands cater to both connoisseurs and casual enthusiasts alike. At Enstore, we believe in fostering strong partnerships with retailers, hospitality venues, and consumers."
+        description="From smooth Irish whiskeys to bold tequilas and luxurious cognacs, our brands cater to both connoisseurs and casual enthusiasts alike. At Enstore, we believe in fostering strong partnerships with trade partners, wholesalers, retailers, hospitality venues, and consumers."
       />
       <LatestNewsSection />
       <OurManagementSection />

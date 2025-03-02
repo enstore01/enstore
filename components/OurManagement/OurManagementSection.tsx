@@ -1,37 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import OurManagementCard from "./OurManagementCard";
-import managementImage1 from "@/assets/team1.jpg";
-import managementImage2 from "@/assets/team2.jpg";
-import managementImage3 from "@/assets/team3.jpg";
-
-const dummyManagement = [
-  {
-    image: managementImage1,
-    title: "Managing Director",
-    name: "Emmanuel Ogu",
-    description:
-      "A Distribution Professional with over 15 years experience of outstanding success in professional Sales/Distribution, Channel Partner Management, Trade Marketing, Route To Market Development/Roll Out and In Market Research/Analysis.",
-
-    link: "https://www.linkedin.com/in/emmanuel-ogu-48654777 ",
-  },
-  {
-    image: managementImage2,
-    title: "General Manager Corporate Services",
-    name: "Edijana Udosen",
-    description:
-      "Edijana Udosen is an accomplished Human Capital Management professional with over 17 years of expertise in core Human Resources and Corporate Services Management with an extensive background spanning FMCG (Wines & Spirts).",
-    link: "https://www.linkedin.com/in/edijana-udosen",
-  },
-  {
-    image: managementImage3,
-    title: "General Manager Commercial",
-    name: "David Allison",
-    description:
-      "An innovative and experienced supply chain and business development professional. Highly knowledgeable in logistics, sales and operation management, adept at evaluating situations and leading change.",
-    link: "https://www.linkedin.com/in/david-allison-99403280",
-  },
-];
+import { managementData } from "@/lib/managementData";
 
 const OurManagementSection = () => {
   return (
@@ -48,7 +18,7 @@ const OurManagementSection = () => {
           </p>
         </div>
         <div className="flex flex-wrap gap-6 justify-center py-10">
-          {dummyManagement.map((member, index) => (
+          {managementData.map((member, index) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -56,13 +26,7 @@ const OurManagementSection = () => {
               key={index}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <OurManagementCard
-                image={member.image}
-                title={member.title}
-                name={member.name}
-                description={member.description}
-                link={member.link}
-              />
+              <OurManagementCard {...member} />
             </motion.div>
           ))}
         </div>

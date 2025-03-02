@@ -3,11 +3,11 @@ import { useRef, useState, useEffect } from "react";
 import BrandCard from "./BrandCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import teeling2 from "@/public/images/TeelingTrinity1.jpg";
-import neftLogo from "@/public/images/neft4.jpg";
-import padreAzul1 from "@/assets/padreAzul1.jpeg";
-import courvoisier1 from "@/public/images/courvoisier4.jpg";
+import neftLogo from "@/public/images/neftnew.png";
+import padreAzul1 from "@/public/images/padreNew.png";
+import courvoisier1 from "@/public/images/courvoisierNew.png";
 import bisquit1 from "@/assets/BisquitDubouche1.jpg";
-import buenAmigo1 from "@/public/images/beunAmigo.jpg";
+import buenAmigo1 from "@/public/images/buenAmigoNew.png";
 
 import { StaticImageData } from "next/image";
 
@@ -32,9 +32,9 @@ const brands: Brand[] = [
   },
   {
     image: bisquit1,
-    title: "Bisquit & Dubouche",
+    title: "Bisquit & Dubouché",
     description:
-      "Bisquit & Dubouche Cognac offers a smooth, aromatic blend with rich notes of honey, fruits, and spice, crafted for timeless elegance",
+      "Bisquit & Dubouché Cognac offers a smooth, aromatic blend with rich notes of honey, fruits, and spice, crafted for timeless elegance",
   },
 
   {
