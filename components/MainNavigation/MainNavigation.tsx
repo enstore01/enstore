@@ -50,7 +50,7 @@ const MainNavigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden focus:outline-none text-primary"
+            className="lg:hidden focus:outline-none text-primary"
             onClick={toggleMenu}
             aria-label="Toggle navigation menu"
           >
@@ -58,7 +58,7 @@ const MainNavigation = () => {
           </button>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex xl:w-1/2 lg:text-[18px] font-medium gap-6 items-center text-navy">
+          <nav className="hidden lg:flex xl:w-1/2 lg:text-[18px] font-medium gap-6 items-center text-navy">
             {navLinks.map(({ href, label }) => (
               <Link key={href} href={href} className={getLinkClassName(href)}>
                 {label}
