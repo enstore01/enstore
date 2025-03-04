@@ -1,5 +1,6 @@
 import Image from "next/image";
 import image1 from "@/assets/team2.jpg";
+import Link from "next/link";
 
 const WhyJoinUs = () => {
   return (
@@ -12,7 +13,9 @@ const WhyJoinUs = () => {
           perks, insider access, and expert insights that elevate your journey
           into premium wines and spirits.
         </p>
-        <button className="btn btn-primary mt-6">Our Brands</button>
+        <Link href="/brands" className="btn btn-primary mt-6">
+          Our Brands
+        </Link>
       </div>
       <div className="lg:w-[40%]">
         <div className="rounded-lg overflow-hidden h-[300px] md:h-[400px] relative">

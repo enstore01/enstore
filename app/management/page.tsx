@@ -54,7 +54,7 @@ const OurManagementPage = () => {
                 </div>
 
                 <div className="max-w-none text-gray-600 text-justify tracking-tight">
-                  <p className="leading-relaxed">{member.description}</p>
+                  <p className="leading-relaxed">{`${member.description}`}</p>
                 </div>
 
                 {/* Contact & Social */}

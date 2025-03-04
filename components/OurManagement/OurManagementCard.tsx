@@ -27,7 +27,7 @@ const OurManagementCard: React.FC<OurManagementCardProps> = ({
           src={image}
           alt={title}
           fill
-          className="rounded-t object-cover"
+          className="rounded-t"
           sizes="(max-width: 768px) 100vw, 33vw"
           priority
         />

@@ -1,6 +1,5 @@
 import PageHeader from "@/components/PageHeader/PageHeader";
 import Footer from "@/components/Footer/Footer";
-import OurManagementSection from "@/components/OurManagement/OurManagementSection";
 import CollaborateSection from "@/components/Collaborate/CollaborateSection";
 import WhyJoinUs from "@/components/WhyJoinUs/WhyJoinUs";
 import ExploreOpportunitiesSection from "@/components/ExploreOpportunities/ExploreOpportunitiesSection";
@@ -19,7 +18,7 @@ const CareersPage = () => {
         <WhyJoinUs />
         <ExploreOpportunitiesSection />
       </div>
-      <OurManagementSection />
+
       <CollaborateSection />
       <Footer />
     </div>
