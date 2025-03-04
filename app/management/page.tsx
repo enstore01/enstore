@@ -69,7 +69,7 @@ const OurManagementPage = () => {
                     <span>Connect on LinkedIn</span>
                   </a>
                   <a
-                    href={`mailto:${member.name.toLowerCase().replace(" ", ".")}@enstore.com`}
+                    href={`mailto:${member.mail}}`}
                     className="inline-flex items-center gap-2 px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-white rounded-lg transition-colors"
                   >
                     <Mail className="w-5 h-5" />
