@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image1 from "@/assets/team2.jpg";
+import image1 from "@/public/images/enstoreCareers.jpg";
 import Link from "next/link";
 
 const WhyJoinUs = () => {
@@ -17,13 +17,13 @@ const WhyJoinUs = () => {
           Our Brands
         </Link>
       </div>
-      <div className="lg:w-[40%]">
+      <div className="lg:w-[50%]">
         <div className="rounded-lg overflow-hidden h-[300px] md:h-[400px] relative">
           <Image
             src={image1}
             alt="man smiling with a bottle"
             fill
-            // className="object-cover"
+            className="object-cover"
           />
         </div>
         <div className="py-8">

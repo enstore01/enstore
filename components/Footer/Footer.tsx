@@ -27,7 +27,7 @@ const Footer = () => {
             <Facebook />
           </a>
           <a
-            href="https://twitter.com/"
+            href="https://x.com/EnstoreNigeria"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"
@@ -43,7 +43,7 @@ const Footer = () => {
             <Instagram />
           </a>
           <a
-            href="https://youtube.com/"
+            href="https://youtube.com/@enstorenigeria3114"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"

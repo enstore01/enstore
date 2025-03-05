@@ -13,12 +13,21 @@ const OpportunitiesCard: React.FC<OpportunitiesCardProps> = ({
   type,
   location,
 }) => {
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }).format(date);
+  };
+
   return (
     <div className="bg-light shadow-lg rounded overflow-hidden w-[350px] p-4 pb-10 mt-10">
       <h2 className="text-2xl font-semibold text-accent tracking-tight leading-tight line-clamp-2 mt-4">
         {title}
       </h2>
-      <p className="mt-1">Posted {time} hours ago</p>
+      <p className="mt-1">Posted {formatDate(time)}</p>
       <p className="flex gap-1 items-center mt-10">
         <MapPin size={15} /> {location}
       </p>

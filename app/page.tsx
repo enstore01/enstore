@@ -7,12 +7,12 @@ import LatestNewsSection from "@/components/LatestNews/LatestNewsSection";
 import OurManagementSection from "@/components/OurManagement/OurManagementSection";
 import CollaborateSection from "@/components/Collaborate/CollaborateSection";
 import Footer from "@/components/Footer/Footer";
-// import { getAllPosts, getPost } from "@/sanity/lib/client";
+// import { getAllJobs } from "@/sanity/lib/client";
 
 export default async function Home() {
-  // const posts = await getAllPosts();
+  // const jobs = await getAllJobs();
   // const singlePost = await getPost("neft-vodka-expands-distribution-network");
-  // console.log(posts, singlePost);
+  // console.log(jobs);
 
   return (
     <div>

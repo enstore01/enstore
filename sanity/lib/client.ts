@@ -2,6 +2,7 @@ import { createClient } from "next-sanity";
 import { groq } from "next-sanity";
 import { apiVersion, dataset, projectId } from "../env";
 import { Post } from "@/types/Posts";
+import { Job } from "@/types/Jobs";
 // import createImageUrlBuilder from "@sanity/image-url";
 
 export const client = createClient({
@@ -24,6 +25,9 @@ const postQuery = groq`*[_type == "post"] {
   body
 }`;
 
+const jobQuery = groq`*[_type == "job"] {
+_id,title,timePublished, location, type}`;
+
 const singlePostQuery = groq`*[_type == "post" && slug.current == $slug][0] {
   _id,
  title,
@@ -45,6 +49,9 @@ export async function getPost(slug: string): Promise<Post> {
   return await client.fetch(singlePostQuery, { slug });
 }
 
+export async function getAllJobs(): Promise<Job[]> {
+  return await client.fetch(jobQuery);
+}
 // Add more queries and fetch functions as needed
 
 // image builder
