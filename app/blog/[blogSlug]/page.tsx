@@ -33,7 +33,7 @@ export default async function BlogPost({
           <div className="flex justify-between items-center text-[14px] text-gold mb-4">
             <span className="py-1">{formattedDate}</span>
             <span className="border py-1 px-2 border-gold rounded-full">
-              {post.categories}
+              {post.categories?.[0] || "News"}
             </span>
           </div>
           <h1 className="text-4xl font-semibold text-accent tracking-tight leading-tight mb-6">
