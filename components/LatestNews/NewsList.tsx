@@ -60,7 +60,7 @@ const NewsList: React.FC<NewsListProps> = ({ posts }) => {
             title={news.title}
             description={news.description}
             date={news.publishedAt}
-            category={news.categories[0]}
+            category={news.categories?.[0] || "News"}
             slug={news.slug}
           />
         ))}
