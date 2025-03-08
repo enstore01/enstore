@@ -27,7 +27,7 @@ const MainNavigation = () => {
   const closeMenu = () => setIsOpen(false);
 
   const getLinkClassName = (href: string) => `
-    px-4 py-2 border-b-4 ${
+    px-4 py-2 border-b-4 xl:text-[20px] shrink-0 ${
       pathname === href ? "border-brand" : "border-transparent"
     } transition-all duration-200
   `;
@@ -40,8 +40,8 @@ const MainNavigation = () => {
             <Image
               src={logo}
               alt="Enstore logo"
-              width={120}
-              height={21} // 120 * (71/416) ≈ 21
+              // width={120}
+              height={30} // 120 * (71/416) ≈ 21
               className="cursor-pointer"
               priority
               quality={100}

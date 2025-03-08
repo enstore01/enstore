@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import aboutPic from "@/public/images/IMG_3729.jpg";
+import Link from "next/link";
 
 const AboutUsSection: React.FC = () => {
   return (
@@ -24,8 +25,8 @@ const AboutUsSection: React.FC = () => {
               selection of premium wines and spirits to Nigeria’s insightful
               consumers. We are a wines and spirits importation, marketing,
               sales, and distribution company committed to sourcing the most
-              unique, innovative and premium brand companies making fresh entry
-              into the booming Nigerian market.
+              unique, innovative and premium brands making fresh entry into the
+              booming Nigerian market.
             </p>
 
             <p className="text-primary tracking-tight">
@@ -34,18 +35,59 @@ const AboutUsSection: React.FC = () => {
               quality, craftsmanship, and heritage. With a deep understanding of
               Nigeria&apos;s dynamic beverage market, we are committed to
               elevating the drinking experience by offering a diverse range of
-              exceptional spirits, including Teeling Whiskey, NEFT Vodka,
-              Tequila Buen Amigo, Padre Azul, Bisquit & Dubouché Cognac, and
-              Courvoisier.
+              exceptional spirits, including{" "}
+              <Link
+                href="/brands#teeling-whiskey"
+                className="text-brand font-semibold"
+              >
+                Teeling Whiskey
+              </Link>
+              ,{" "}
+              <Link
+                href="/brands#neft-vodka"
+                className="text-brand font-semibold"
+              >
+                NEFT Vodka
+              </Link>
+              ,{" "}
+              <Link
+                href="/brands#buen-amigo-tequila"
+                className="text-brand font-semibold"
+              >
+                Tequila Buen Amigo
+              </Link>
+              ,{" "}
+              <Link
+                href="/brands#padre-azul"
+                className="text-brand font-semibold"
+              >
+                Padre Azul
+              </Link>
+              ,{" "}
+              <Link
+                href="/brands#bisquit---dubouché"
+                className="text-brand font-semibold"
+              >
+                Bisquit & Dubouché Cognac
+              </Link>
+              , and{" "}
+              <Link
+                href="/brands#courvoisier"
+                className="text-brand font-semibold"
+              >
+                Courvoisier
+              </Link>
+              .
             </p>
+
             <p className="hidden xl:block text-primary mt-2 tracking-tight lg:pr-10">
-              Through strategic distribution, innovative marketing, and
-              educational initiatives, we ensure that every sip of our brands
-              reflects authenticity, sophistication, and enjoyment. Whether
+              Through strategic distribution, and innovative marketing, we
+              ensure that every sip of the brands in our portfolio reflects
+              authenticity, sophistication, and conviviality. Whether
               you&apos;re savoring a classic whiskey, toasting with a refined
               cognac, or enjoying a handcrafted cocktail, Enstore Nigeria Ltd is
-              dedicated to bringing the world’s finest spirits to your glass.
-              Experience Excellence. Enjoy the Finest.
+              dedicated to bringing the world’s finest wines & spirits to your
+              glass.
             </p>
           </motion.div>
           <motion.div

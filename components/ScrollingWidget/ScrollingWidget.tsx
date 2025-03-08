@@ -1,8 +1,8 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import teelingLogo from "@/assets/teelingLogo.svg";
-import neftLogo from "@/assets/NeftLogo.png";
-import courvoisierLogo from "@/assets/Courvoisier-Logo.jpg";
+import neftLogo from "@/public/images/NEFT-logo.webp";
+import courvoisierLogo from "@/public/images/courvoisierLogo.png";
 import bisquitDuboucheLogo from "@/assets/BisquitDuboucheLogo.jpg";
 import beunAmigoLogo from "@/assets/buenAmigo1.jpg";
 import padreAzul from "@/assets/padre-azul.webp";

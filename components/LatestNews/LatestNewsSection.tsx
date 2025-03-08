@@ -27,7 +27,7 @@ const LatestNewsSection = async () => {
             title={news.title}
             description={news.description}
             date={news.publishedAt}
-            category={news.categories[0]}
+            category={news.categories?.[0] || "News"}
           />
         ))}
       </div>

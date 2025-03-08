@@ -22,26 +22,32 @@ const brands: Brand[] = [
     image: teeling2,
     title: "Teeling Whiskey",
     description:
-      "Teeling Whiskey Bottled at 46% with no chill filtration, Teeling whiskeys have unique extra maturation in Rum/Wine casks",
+      "Teeling Whiskey carries a rich Dublin distilling heritage dating back to 1782. The brand blends tradition with innovation, using unique maturation techniques to craft the most amazing Irish whiskeys ever made. Teeling Whiskey has won over 500 international awards, including World’s Best Single Malt, World’s Best Single Grain, and is now enjoyed in over countries around the world.",
+    // description:
+    //   "Teeling Whiskey Bottled at 46% with no chill filtration, Teeling whiskeys have unique extra maturation in Rum/Wine casks",
   },
   {
     image: courvoisier1,
     title: "Courvoisier",
     description:
-      "Courvoisier Cognac is premium French brand renowned for its rich heritage and exceptional craftsmanship. Blending the finest eaux-de-vie from Cognac",
+      "Crafted with passion and precision, Courvoisier is the Cognac of celebration, inspired by the elegance of France. From carefully selected vineyards to centuries-old distillation methods, every sip embodies refinement and rich, complex flavors. As the spirit of choice for history’s great moments, Courvoisier invites you to savor luxury, heritage, and the art of cognac.",
+    // description:
+    //   "Courvoisier Cognac is premium French brand renowned for its rich heritage and exceptional craftsmanship. Blending the finest eaux-de-vie from Cognac",
   },
   {
     image: bisquit1,
     title: "Bisquit & Dubouché",
     description:
-      "Bisquit & Dubouché Cognac offers a smooth, aromatic blend with rich notes of honey, fruits, and spice, crafted for timeless elegance",
+      "Since 1819, Bisquit & Dubouché has crafted exceptional cognac, embodying the vision of its founders—Alexandre Bisquit and Adrien Dubouché. Renowned for its longer distillation process, Bisquit & Dubouché cognacs reveal deeper aromas, smoothness, and rich complexity. A symbol of bold elegance, Bisquit & Dubouché invites you to discover the artistry of time in every sip.",
+    // description:
+    //   "Bisquit & Dubouché Cognac offers a smooth, aromatic blend with rich notes of honey, fruits, and spice, crafted for timeless elegance",
   },
 
   {
     image: neftLogo,
     title: "Neft Vodka",
     description:
-      "Neft is an Austrian produced vodka with a natural, slightly sweet finish that can be sipped straight, or used to enhance your favourite cocktail.",
+      "Neft is an Austrian produced vodka with a natural, slightly sweet finish that can be sipped straight, or used to enhance your favourite cocktail. Encased in a sleek, eco-friendly barrel, NEFT blends premium quality with a bold, modern edge. No additives, no gimmicks—just vodka the way it was meant to be",
   },
   {
     image: buenAmigo1,
