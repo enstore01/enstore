@@ -41,8 +41,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }} // Delay for a staggered effect
             className="text-lg text-gray-200 mt-6 tracking-tight font-poppins"
           >
-            Embark on a Journey Through the World’s Finest Spirits. for the
-            discover part of the homepage.
+            Embark on a Journey Through the World’s Finest Spirits.
           </motion.p>
         </div>
       </div>

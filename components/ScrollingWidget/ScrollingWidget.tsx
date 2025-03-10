@@ -2,10 +2,10 @@
 import Image, { StaticImageData } from "next/image";
 import teelingLogo from "@/assets/teelingLogo.svg";
 import neftLogo from "@/public/images/NEFT-logo.webp";
-import courvoisierLogo from "@/public/images/courvoisierLogo.png";
+import courvoisierLogo from "@/public/images/courvoisierLogo1.png";
 import bisquitDuboucheLogo from "@/assets/BisquitDuboucheLogo.jpg";
 import beunAmigoLogo from "@/assets/buenAmigo1.jpg";
-import padreAzul from "@/assets/padre-azul.webp";
+import padreAzul from "@/assets/padre-azul1.png";
 
 import { motion } from "framer-motion";
 

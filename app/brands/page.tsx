@@ -120,7 +120,7 @@ const OurBrandsPage = () => {
       <Banner
         title="Instantly recognisable brands"
         src="https://media.istockphoto.com/id/1517091311/photo/creative-summer-composition-with-lemon-slice-mint-leaves-can-of-soda-and-ice-cubes-minimal.jpg?s=612x612&w=0&k=20&c=sd89tIw8WiNZ3Sfa-Lepl4tZUtp_9jkGIXu2g_KsQ14="
-        description="Global or local, every one of our brands has a story. Many bear witness to the changing world over centuries, while others are products of our world today. All have a purpose and role to play in creating enduring connections with people.
+        description="Global or local, every one of our brands has a story. They all have a purpose and role to play in creating enduring connections with people.
 
 "
       />

@@ -65,17 +65,15 @@ const OurBrandsSection: React.FC = () => {
   const checkScrollPosition = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      // Show/hide left arrow
       setShowLeftArrow(scrollLeft > 0);
-      // Show/hide right arrow
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth);
+      setShowRightArrow(Math.ceil(scrollLeft + clientWidth) < scrollWidth);
     }
   };
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
       const { scrollLeft, clientWidth } = carouselRef.current;
-      const scrollAmount = clientWidth * 0.8; // Adjust based on visible cards
+      const scrollAmount = clientWidth * 0.8;
       const newScrollLeft =
         direction === "left"
           ? Math.max(scrollLeft - scrollAmount, 0)
@@ -85,17 +83,21 @@ const OurBrandsSection: React.FC = () => {
         left: newScrollLeft,
         behavior: "smooth",
       });
-
-      // Check scroll position after scrolling
-      setTimeout(checkScrollPosition, 300); // Delay to account for smooth scrolling
     }
   };
 
-  // Check scroll position on mount and resize
   useEffect(() => {
-    checkScrollPosition();
-    window.addEventListener("resize", checkScrollPosition);
-    return () => window.removeEventListener("resize", checkScrollPosition);
+    const carousel = carouselRef.current;
+    if (carousel) {
+      carousel.addEventListener("scroll", checkScrollPosition);
+      window.addEventListener("resize", checkScrollPosition);
+      checkScrollPosition(); // Initial check
+
+      return () => {
+        carousel.removeEventListener("scroll", checkScrollPosition);
+        window.addEventListener("resize", checkScrollPosition);
+      };
+    }
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import managementImage1 from "@/assets/team1.jpg";
-import managementImage2 from "@/public/images/edijana.png";
-import managementImage3 from "@/public/images/david.png";
+import managementImage2 from "@/public/images/edijana2.png";
+import managementImage3 from "@/public/images/david2.png";
 import { StaticImageData } from "next/image";
 
 export interface ManagementMember {
