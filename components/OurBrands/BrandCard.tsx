@@ -29,7 +29,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ image, title, description }) => {
       {/* Content */}
       <div className="p-5">
         <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-        <p className="text-gray-600 mt-2">{description}</p>
+        <p className="text-gray-600 mt-2 text-justify">{description}</p>
 
         {/* Learn More Button */}
         <Link href={`/brands#${brandId}`}>

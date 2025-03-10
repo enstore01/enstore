@@ -3,7 +3,7 @@ import PageHeader from "@/components/PageHeader/PageHeader";
 import Footer from "@/components/Footer/Footer";
 import { managementData } from "@/lib/managementData";
 import Image from "next/image";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const OurManagementPage = () => {
@@ -58,7 +58,7 @@ const OurManagementPage = () => {
                 </div>
 
                 {/* Contact & Social */}
-                <div className="flex items-center gap-4 pt-4">
+                <div className="pt-4">
                   <a
                     href={member.link}
                     target="_blank"
@@ -67,13 +67,6 @@ const OurManagementPage = () => {
                   >
                     <Linkedin className="w-5 h-5" />
                     <span>Connect on LinkedIn</span>
-                  </a>
-                  <a
-                    href={`mailto:${member.mail}}`}
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-white rounded-lg transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                    <span>Send Email</span>
                   </a>
                 </div>
               </motion.div>

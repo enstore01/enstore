@@ -41,8 +41,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }} // Delay for a staggered effect
             className="text-lg text-gray-200 mt-6 tracking-tight font-poppins"
           >
-            Global icon in premium wines and spirits, crafting legendary brands
-            that celebrate excellence and bring people together.
+            Embark on a Journey Through the World’s Finest Spirits. for the
+            discover part of the homepage.
           </motion.p>
         </div>
       </div>

@@ -22,25 +22,19 @@ const brands: Brand[] = [
     image: teeling2,
     title: "Teeling Whiskey",
     description:
-      "Teeling Whiskey carries a rich Dublin distilling heritage dating back to 1782. The brand blends tradition with innovation, using unique maturation techniques to craft the most amazing Irish whiskeys ever made. Teeling Whiskey has won over 500 international awards, including World’s Best Single Malt, World’s Best Single Grain, and is now enjoyed in over countries around the world.",
-    // description:
-    //   "Teeling Whiskey Bottled at 46% with no chill filtration, Teeling whiskeys have unique extra maturation in Rum/Wine casks",
+      "Teeling Whiskey carries a rich Dublin distilling heritage dating back to 1782. The brand blends tradition with innovation, using unique maturation techniques to craft the most amazing Irish whiskeys ever made. Teeling Whiskey has won over 500 international awards, including World’s Best Single Malt, World’s Best Single Grain, and is now enjoyed in over countries around the world.",
   },
   {
     image: courvoisier1,
     title: "Courvoisier",
     description:
       "Crafted with passion and precision, Courvoisier is the Cognac of celebration, inspired by the elegance of France. From carefully selected vineyards to centuries-old distillation methods, every sip embodies refinement and rich, complex flavors. As the spirit of choice for history’s great moments, Courvoisier invites you to savor luxury, heritage, and the art of cognac.",
-    // description:
-    //   "Courvoisier Cognac is premium French brand renowned for its rich heritage and exceptional craftsmanship. Blending the finest eaux-de-vie from Cognac",
   },
   {
     image: bisquit1,
     title: "Bisquit & Dubouché",
     description:
       "Since 1819, Bisquit & Dubouché has crafted exceptional cognac, embodying the vision of its founders—Alexandre Bisquit and Adrien Dubouché. Renowned for its longer distillation process, Bisquit & Dubouché cognacs reveal deeper aromas, smoothness, and rich complexity. A symbol of bold elegance, Bisquit & Dubouché invites you to discover the artistry of time in every sip.",
-    // description:
-    //   "Bisquit & Dubouché Cognac offers a smooth, aromatic blend with rich notes of honey, fruits, and spice, crafted for timeless elegance",
   },
 
   {
@@ -53,13 +47,13 @@ const brands: Brand[] = [
     image: buenAmigo1,
     title: "Buen Amigo Tequila",
     description:
-      "Beun Amigo Tequila is a smooth, vibrant spirit with rich agave flavours, perfect for sipping or cocktails, celebrating true frendship and craftmanship.",
+      "Tequila Buen Amigo is more than just a drink—it’s a celebration of friendship and good times. Made from 100% blue agave and distilled with passion in the heart of Mexico, our tequila delivers smooth, rich flavors perfect for any occasion. Whether sipped neat, on the rocks, or in a cocktail, Buen Amigo brings people together, one toast at a time.",
   },
   {
     image: padreAzul1,
     title: "Padre Azul",
     description:
-      "Padre Azul Tequila is an ultra-premium, handcrafted spirit with rich agave flavors, smooth complexity, and a bold, stylish presentation.",
+      "Crafted in Jalisco, Mexico, Padre Azul is an award-winning ultra-premium tequila made from 100% blue agave. Aged to perfection in hand-selected oak barrels, it delivers a rich, smooth taste with deep complexity. Encased in a signature handcrafted bottle with a bold skull cap, Padre Azul is more than tequila—it’s a tribute to tradition, craftsmanship, and unforgettable moments.",
   },
 ];
 
