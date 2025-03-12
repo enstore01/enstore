@@ -13,8 +13,8 @@ import award10 from "@/public/images/awards/award10.jpg";
 import award11 from "@/public/images/awards/award11.jpg";
 import award12 from "@/public/images/awards/award12.png";
 import award13 from "@/public/images/awards/award13.jpg";
-import award14 from "@/public/images/awards/award14.jpg";
-import award15 from "@/public/images/awards/award15.png";
+// import award14 from "@/public/images/awards/award14.jpg";
+// import award15 from "@/public/images/awards/award15.png";
 import award16 from "@/public/images/awards/award16.jpg";
 import award17 from "@/public/images/awards/award17.jpg";
 import award18 from "@/public/images/awards/award18.png";
@@ -48,8 +48,8 @@ const AwardsComponents = () => {
       { src: award20, alt: "Blackpitts Award" },
       { src: award21, alt: "Blackpitts Award" },
       { src: award22, alt: "Blackpitts Award" },
-      { src: award14, alt: "Teeling Award" },
-      { src: award15, alt: "Teeling Award" },
+      //   { src: award14, alt: "Teeling Award" },
+      //   { src: award15, alt: "Teeling Award" },
     ],
     "Padre Azul": [{ src: award1, alt: "Padre Award" }],
   };
