@@ -21,6 +21,7 @@ import buenAmigoGold from "@/public/images/buenAmigoGold.png";
 import buenAmigoSilver from "@/public/images/buenAmigoSilver.png";
 import buenAmigoCoffee from "@/public/images/buenAmigoCoffee.jpg";
 // import Banner from "@/components/Banner/Banner";
+import AwardsComponents from "@/components/AwardsComponent/AwardsComponents";
 
 const brands = [
   {
@@ -221,6 +222,7 @@ const OurBrandsPage = () => {
           <BrandsPageCard key={index} {...brand} reverse={index % 2 !== 0} />
         ))}
       </div>
+      <AwardsComponents />
       {/* <Banner
         title="Instantly recognisable brands"
         src="https://media.istockphoto.com/id/1517091311/photo/creative-summer-composition-with-lemon-slice-mint-leaves-can-of-soda-and-ice-cubes-minimal.jpg?s=612x612&w=0&k=20&c=sd89tIw8WiNZ3Sfa-Lepl4tZUtp_9jkGIXu2g_KsQ14="
