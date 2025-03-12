@@ -34,7 +34,7 @@ const brands: Brand[] = [
     image: bisquit1,
     title: "Bisquit & Dubouché",
     description:
-      "Since 1819, Bisquit & Dubouché has crafted exceptional cognac, embodying the vision of its founders—Alexandre Bisquit and Adrien Dubouché. Renowned for its longer distillation process, Bisquit & Dubouché cognacs reveal deeper aromas, smoothness, and rich complexity. A symbol of bold elegance, Bisquit & Dubouché invites you to discover the artistry of time in every sip.",
+      "Since 1819, Bisquit & Dubouché has crafted exceptional cognac. Renowned for its longer distillation process, Bisquit & Dubouché cognacs reveal deeper aromas, smoothness, and rich complexity. A symbol of bold elegance, Bisquit & Dubouché invites you to discover the artistry of time in every sip.",
   },
 
   {

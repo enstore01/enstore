@@ -1,12 +1,12 @@
 import PageHeader from "@/components/PageHeader/PageHeader";
 import NewsList from "@/components/LatestNews/NewsList";
-import Banner from "@/components/Banner/Banner";
+import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
 import { getAllPosts } from "@/sanity/lib/client";
+import blogImage from "@/public/images/LRC67671.png";
 
 const BlogPage = async () => {
   const posts = await getAllPosts();
-  // console.log(posts);
 
   return (
     <div>
@@ -16,11 +16,14 @@ const BlogPage = async () => {
         description="Stay updated with the latest happenings, exclusive events, and exciting releases in the world of spirits, wine, and more"
       />
       <NewsList posts={posts} />
-      <Banner
-        title="DESIGNED FOR PRESTIGE"
-        src="https://plus.unsplash.com/premium_photo-1694825174350-cb9f27949883?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFsY29ob2x8ZW58MHx8MHx8fDA%3D"
-        description="The iconic teardrop bottle shape is a key design expression in each bottle in our cognac Prestige Collection, with rich colors that represent the depth and complexity of these creations. Elements of nature and water bring to life the importance of the craft that goes into the precise blending"
-      />
+      <div className="w-full mt-10">
+        <Image
+          src={blogImage}
+          alt="Blog footer image"
+          className="w-full h-auto"
+          priority
+        />
+      </div>
       <Footer />
     </div>
   );

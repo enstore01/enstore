@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import image1 from "@/public/images/enstoreCareers.jpg";
+// import image1 from "@/public/images/enstoreCareers.jpg";
+import image1 from "@/public/images/workwithus.jpg";
 import { useState } from "react";
 import { X } from "lucide-react";
 

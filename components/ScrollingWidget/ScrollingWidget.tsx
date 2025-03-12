@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import teelingLogo from "@/assets/teelingLogo.svg";
 import neftLogo from "@/public/images/NEFT-logo.webp";
 import courvoisierLogo from "@/public/images/courvoisierLogo1.png";
-import bisquitDuboucheLogo from "@/assets/BisquitDuboucheLogo.jpg";
+import bisquitDuboucheLogo from "@/public/images/b&d.webp";
 import beunAmigoLogo from "@/assets/buenAmigo1.jpg";
 import padreAzul from "@/assets/padre-azul1.png";
 
@@ -15,17 +15,17 @@ interface BrandLogo {
 }
 
 const brandLogos: BrandLogo[] = [
-  { src: teelingLogo, alt: "Teeling Whiskey" },
   { src: neftLogo, alt: "Neft Vodka" },
-  { src: courvoisierLogo, alt: "Courvoisier Cognac" },
-  { src: bisquitDuboucheLogo, alt: "Bisquit Dubouche" },
+  { src: teelingLogo, alt: "Teeling Whiskey" },
   { src: beunAmigoLogo, alt: "Buen Amigo Tequila" },
+  { src: courvoisierLogo, alt: "Courvoisier Cognac" },
   { src: padreAzul, alt: "Padre Azul Tequila" },
+  { src: bisquitDuboucheLogo, alt: "Bisquit Dubouche" },
 ];
 
 const ScrollingWidget = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white py-1">
       <div className="container">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
           <motion.div

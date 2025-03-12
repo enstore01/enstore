@@ -27,7 +27,7 @@ const MainNavigation = () => {
   const closeMenu = () => setIsOpen(false);
 
   const getLinkClassName = (href: string) => `
-    px-4 py-2 border-b-4 xl:text-[20px] shrink-0 ${
+    px-4 py-2 border-b-4 shrink-0 ${
       pathname === href ? "border-brand" : "border-transparent"
     } transition-all duration-200
   `;
@@ -58,7 +58,7 @@ const MainNavigation = () => {
           </button>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex xl:w-1/2 lg:text-[18px] font-medium gap-6 items-center text-navy">
+          <nav className="hidden lg:flex xl:w-1/2 lg:text-[18px] xl:text-[22px] font-medium gap-6 items-center text-navy">
             {navLinks.map(({ href, label }) => (
               <Link key={href} href={href} className={getLinkClassName(href)}>
                 {label}
