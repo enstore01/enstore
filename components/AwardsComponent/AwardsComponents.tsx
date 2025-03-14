@@ -123,7 +123,7 @@ const AwardsComponents = () => {
           {Object.entries(awardsByBrand).map(([brandName, brandData]) => (
             <div key={brandName} className="bg-white/10 p-6 rounded-lg">
               <div className="md:flex items-center gap-4 mb-6">
-                <div className="relative h-[250px] w-[300px] overflow-hidden flex-shrink-0">
+                <div className="relative h-[150px] w-[150px] rounded-sm overflow-hidden flex-shrink-0">
                   <Image
                     src={brandData.logo}
                     alt={`${brandName} logo`}
