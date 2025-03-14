@@ -13,6 +13,8 @@ export interface BrandsPageCardProps {
   variations: string[]; // e.g. ["VS", "VSOP", "XO"]
   description: string[];
   reverse: boolean;
+  headFont: string;
+  bodyFont: string;
 }
 
 const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
@@ -21,6 +23,8 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
   variations,
   description,
   reverse,
+  headFont,
+  bodyFont,
 }) => {
   const brandId = title.toLowerCase().replace(/\s+|&/g, "-");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -93,7 +97,12 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
         </div>
       </div>
       <div className="lg:w-1/2 lg:pl-8 mt-6 lg:mt-0 p-4">
-        <h2 className="top-header mt-0 pb-3">{title}</h2>
+        <h2
+          className="top-header mt-0 pb-3"
+          style={{ fontFamily: `var(--font-${headFont})` }}
+        >
+          {title}
+        </h2>
         <div className="flex flex-wrap gap-2 mt-2 font-semibold items-center text-[#2b2d42] ml-1">
           {variations.map((variation, index) => (
             <button
@@ -110,9 +119,12 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
             </button>
           ))}
         </div>
-        <p className="mt-6 text-justify xl:mr-20">
+        <p
+          className="mt-6 text-justify xl:mr-20 text-[18px]"
+          style={{ fontFamily: `var(--font-${bodyFont})` }}
+        >
           <motion.span
-            key={currentIndex} // Ensures re-animation on text change
+            key={currentIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

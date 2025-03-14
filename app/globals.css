@@ -7,11 +7,86 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Font family variables */
+  --font-poppins: "Poppins", sans-serif;
+  --font-knight: "Knight Vision", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-akzidenz: "akzidenz grotesk", sans-serif;
+  --font-trade: "trade gothic", sans-serif;
+  --font-chronicle: "chronicle", serif;
+  --font-engravers: "engravers gothic", sans-serif;
+  --font-hand: "hand", cursive;
+  --font-handley: "handley rough", cursive;
+  --font-bisquit: "bisquit regular", sans-serif;
+  --font-radikal: "radikal", sans-serif;
+  --font-fmbolyar: "fmbolyar pro", sans-serif;
+  --font-interstate: "interstate", sans-serif;
 }
 
 @font-face {
   font-family: "Knight Vision";
   src: url("/fonts/KnightVision.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "akzidenz grotesk";
+  src: url("/fonts/akzidenz-grotesk/akzidenz-grotesk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bisquit regular";
+  src: url("/fonts/bisquit-regular/bisquit-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "chronicle";
+  src: url("/fonts/chronicle/chronicle.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "engravers gothic";
+  src: url("/fonts/engravers-gothic/engravers-gothic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "hand";
+  src: url("/fonts/hand/hand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "interstate";
+  src: url("/fonts/interstate/interstate.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "handley rough";
+  src: url("/fonts/handley-rough/handley-rough.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "radikal";
+  src: url("/fonts/radikal/radikal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "trade gothic";
+  src: url("/fonts/trade-gothic/trade-gothic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fmbolyar pro";
+  src: url("/fonts/fmbolyar-pro/fmbolyar-pro.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

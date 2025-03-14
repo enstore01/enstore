@@ -3,7 +3,7 @@ import NewsList from "@/components/LatestNews/NewsList";
 import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
 import { getAllPosts } from "@/sanity/lib/client";
-import blogImage from "@/public/images/LRC67671.png";
+import blogImage from "@/public/images/padre-azul-3.webp";
 
 const BlogPage = async () => {
   const posts = await getAllPosts();

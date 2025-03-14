@@ -50,23 +50,8 @@ const brands = [
       "A true collector’s whiskey, the Teeling 21-Year-Old Rising Reserve is a limited-edition Single Malt that continues the award-winning Vintage Reserve Collection (21YO / 24YO / 28YO). With only 4,000 bottles produced, this highly collectible release is bottled at 46% ABV and available in cases of three 70cl bottles. The Rising Reserve is a rare opportunity to experience the pinnacle of Teeling Whiskey’s innovation and craftsmanship.",
       "An ultra-rare expression, the Teeling 30-Year-Old Single Malt showcases three decades of meticulous craftsmanship. Bottled at 46% ABV, with only 6,000 bottles available, this exceptional whiskey is presented in cases of four 70cl bottles. A testament to Teeling’s innovation and dedication to pushing the boundaries of Irish whiskey.",
     ],
-    // awards: [
-    //   {
-    //     ceremony: " World Whiskies Awards",
-    //     title: "World’s Best Single Malt",
-    //     description: "",
-    //   },
-    //   {
-    //     ceremony: " World Whiskies Awards",
-    //     title: "World’s Best Single Grain",
-    //     description: "",
-    //   },
-    //   {
-    //     ceremony: " World Whiskies Awards",
-    //     title: "World’s Best Single Pot Still",
-    //     description: "",
-    //   },
-    // ],
+    headFont: "engravers",
+    bodyFont: "chronicle",
   },
   {
     images: [courvoisierVS, courvoisierVSOP, courvoisierXO],
@@ -77,26 +62,8 @@ const brands = [
       "The delicate marriage of 4 crus for a subtly floral, uniquely complex richness. Our VSOP cognac symbolizes the versatile and multi-layered nature of the House of Courvoisier",
       "Courvoisier XO pays homage to the Cognac region with carefully selected eaux-de-vie. The signature style of rich fruit XO tasting notes reveals an exquisitely layered blend with an elegant floral finish.",
     ],
-    // awards: [
-    //   {
-    //     ceremony: "The Cognac Masters 2022",
-    //     title: "Gold Medal in VSOP – Single Cru",
-    //     description:
-    //       " Courvoisier VSOP was praised for its elegant and layered fruitiness, earning a Gold medal in this category",
-    //   },
-    //   {
-    //     ceremony: "San Francisco World Spirits Competition",
-    //     title: "Best Cognac in the World",
-    //     description:
-    //       "Courvoisier has been honored with this title, showcasing its commitment to quality and craftsmanship. Gold & Double Gold Medals: The brand has consistently achieved these accolades over the years, reflecting its excellence in cognac production.",
-    //   },
-    //   {
-    //     ceremony: "International Wine & Spirit Competition (IWSC)",
-    //     title: "Gold Medal",
-    //     description:
-    //       "Courvoisier has been recognized for its outstanding products in this esteemed competition.",
-    //   },
-    // ],
+    headFont: "akzidenz",
+    bodyFont: "trade",
   },
   {
     images: [bisquitVSOP, bisquitXO],
@@ -106,26 +73,8 @@ const brands = [
       "Bisquit & Dubouché V.S.O.P is crafted using a unique distillation method, extending the process by nearly an hour longer than traditional Cognacs. From vineyard to distillation to the prestigious Cognac House of Bisquit & Dubouché, every step is guided by unwavering expertise and passion. The result is a premium V.S.O.P Cognac experience, built on tradition, craftsmanship, and an enduring commitment to excellence.",
       "Bisquit & Dubouché XO is a masterpiece of Cognac craftsmanship, offering an exceptional depth of flavor and an opulent sensory experience. It has a rich and complex aroma with notes of dried fruit, honey, cinnamon, and dark chocolate. A velvety texture with layers of ripe plum, hazelnut, and sweet spice, evolving into deep oak, leather undertones with a long, warm, and exceptionally smooth finish, leaving a lingering impression of elegance. Best enjoyed neat or with a drop of water to fully unveil its depth. An exquisite choice for those who appreciate refined luxury and timeless sophistication.",
     ],
-    // awards: [
-    //   {
-    //     ceremony: "The Cognac Masters 2022",
-    //     title: "Master Medal in XO – Single Cru",
-    //     description:
-    //       "Bisquit & Dubouché's Château Fontpinot XO was lauded for its gorgeous nose and well-integrated palate, earning the highest accolade in this category.",
-    //   },
-    //   {
-    //     ceremony: "San Francisco World Spirits Competition",
-    //     title: "Gold Medal",
-    //     description:
-    //       "The brand's cognacs have been acknowledged for their quality and craftsmanship in this competition.",
-    //   },
-    //   {
-    //     ceremony: "International Wine & Spirit Competition (IWSC)",
-    //     title: "Gold Medal",
-    //     description:
-    //       "Bisquit & Dubouché has been honored for its exceptional cognacs in this prestigious event",
-    //   },
-    // ],
+    headFont: "bisquit",
+    bodyFont: "bisquit",
   },
   {
     images: [buenAmigoSilver, buenAmigoGold, buenAmigoCoffee],
@@ -136,6 +85,8 @@ const brands = [
       "Aged to perfection, Buen Amigo Gold Tequila boasts a pale yellow hue, reflecting its time-honored maturation process. It offers a rich aroma of earth and spice, complemented by subtle agave and wood flavors for a smooth yet complex taste experience.Recognized for its quality, Buen Amigo Gold Tequila holds a 79/100 rating on Tequila.net, solidifying its place as a reliable choice within its category.",
       "A premium blend of Tequila Blanco and high-altitude coffee from Oaxaca, Mexico.Rich coffee notes balanced with agave sweetness, vanilla, and a smooth caramel finish. Bottled at 35% ABV, ideal for sipping, cocktails, or dessert pairings.",
     ],
+    headFont: "fmbolyar",
+    bodyFont: "fmbolyar",
   },
   {
     images: [neftBlack, neftWhite],
@@ -145,32 +96,8 @@ const brands = [
       "NEFT Vodka was founded on the belief that vodka should stand on its own, enjoyed neat, solely for its taste. Using just two pure ingredients - ancient non-GMO rye grains and artesian mountain water sourced from the Austrian Alps - NEFT has accomplished just that. The result is an Austrian produced vodka with a refined flavor profile and a natural, slightly sweet finish that can be sipped straight, or used to enhance your favorite cocktail.",
       "NEFT Vodka was founded on the belief that vodka should stand on its own, enjoyed neat, solely for its taste. Using just two pure ingredients - ancient non-GMO rye grains and artesian mountain water sourced from the Austrian Alps - NEFT has accomplished just that. The result is an Austrian produced vodka with a refined flavor profile and a natural, slightly sweet finish that can be sipped straight, or used to enhance your favorite cocktail.",
     ],
-    // awards: [
-    //   {
-    //     ceremony: "San Francisco World Spirits Competition",
-    //     title: "Double Gold Medal",
-    //     description:
-    //       "NEFT Vodka was awarded this prestigious medal, highlighting its exceptional quality.",
-    //   },
-    //   {
-    //     ceremony: "Los Angeles International Spirits Competition",
-    //     title: "Best Vodka",
-    //     description:
-    //       "NEFT Vodka received top honors in this competition, further cementing its status in the vodka industry.",
-    //   },
-    //   {
-    //     ceremony: "SIP Awards",
-    //     title: "Gold Medal",
-    //     description:
-    //       "This consumer-judged competition recognized NEFT Vodka for its superior taste and quality.",
-    //   },
-    //   {
-    //     ceremony: "Ultimate Spirits Challenge",
-    //     title: "95 Points",
-    //     description:
-    //       "NEFT Vodka achieved an impressive score, reflecting its excellence in the spirits category.",
-    //   },
-    // ],
+    headFont: "interstate",
+    bodyFont: "interstate",
   },
   {
     images: [padreAzulBlanco, padreAzulReposado, padreAzulAnejo],
@@ -181,26 +108,8 @@ const brands = [
       "Picture the sun-drenched landscapes of Mexico, where the Blue Agaves embarked on a journey almost a decade ago. A story etched in every sip. Imagine a subtle vanilla flavor, whispers of rare and cooked agave, and a lingering aftertaste that tells the tale of patience and dedication. This Tequila isn’t just a drink; it’s a journey through time, a symphony of flavors crafted by the hands of nature and time itself. Indulge in the emotional richness of this extraordinary Reposado Tequila.",
       "Padre Azul Añejo is aged for 18 months in oak barrels. This gives the spirit a complex and balanced profile. This Añejo unveils a complexity and smoothness like no other. With hints of vanilla, chocolate, caramelized nuts, and cinnamon, it’s the perfect finale for a convivial night. More than a drink, it’s the soulful touch that completes your memorable moments. Cheers to the extraordinary!",
     ],
-    // awards: [
-    //   {
-    //     ceremony: "San Francisco World Spirits Competition",
-    //     title: "Double Gold Medal",
-    //     description:
-    //       "Padre Azul Tequila received this top honor, highlighting its superior quality and craftsmanship.",
-    //   },
-    //   {
-    //     ceremony: "Tequila & Mezcal Masters",
-    //     title: "Gold Medal",
-    //     description:
-    //       "The brand was recognized for its excellence in tequila production in this competition.",
-    //   },
-    //   {
-    //     ceremony: "International Wine & Spirit Competition (IWSC)",
-    //     title: "Gold Medal",
-    //     description:
-    //       " Padre Azul Tequila has been acknowledged for its outstanding products in this esteemed competition.",
-    //   },
-    // ],
+    headFont: "handley",
+    bodyFont: "hand",
   },
 ];
 
