@@ -37,14 +37,6 @@ import padreAzulLogo from "@/public/images/LRC67671.png";
 const AwardsComponents = () => {
   // Organize awards by brand categories with brand logos
   const awardsByBrand = {
-    "Teeling Single Grain": {
-      logo: teelingSingleGrain,
-      awards: [
-        { src: award15, alt: "Teeling Award" },
-        { src: award16, alt: "Teeling Award" },
-        { src: award13, alt: "Teeling Award" },
-      ],
-    },
     "Teeling Small Batch": {
       logo: teelingSmallBatch,
       awards: [
@@ -54,12 +46,32 @@ const AwardsComponents = () => {
         { src: award12, alt: "Teeling Award" },
       ],
     },
+    "Teeling Single Grain": {
+      logo: teelingSingleGrain,
+      awards: [
+        { src: award15, alt: "Teeling Award" },
+        { src: award16, alt: "Teeling Award" },
+        { src: award13, alt: "Teeling Award" },
+      ],
+    },
+
     "Teeling Single Malt": {
       logo: teelingSingleMalt,
       awards: [
         { src: award18, alt: "Teeling Award" },
         { src: award14, alt: "Teeling Award" },
         { src: award17, alt: "Teeling Award" },
+      ],
+    },
+
+    "Blackpitts Pleated Single Malt": {
+      logo: teelingBlackpitts,
+      awards: [
+        { src: award19, alt: "Blackpitts Award" },
+        { src: award20, alt: "Blackpitts Award" },
+        { src: award21, alt: "Blackpitts Award" },
+        { src: award22, alt: "Blackpitts Award" },
+        { src: award13, alt: "Teeling Award" },
       ],
     },
     "Teeling Rising Reserve 21 YO": {
@@ -71,16 +83,6 @@ const AwardsComponents = () => {
       awards: [{ src: award7, alt: "Teeling award" }],
     },
 
-    "Teeling Blackpitts": {
-      logo: teelingBlackpitts,
-      awards: [
-        { src: award19, alt: "Blackpitts Award" },
-        { src: award20, alt: "Blackpitts Award" },
-        { src: award21, alt: "Blackpitts Award" },
-        { src: award22, alt: "Blackpitts Award" },
-        { src: award13, alt: "Teeling Award" },
-      ],
-    },
     Courvoisier: {
       logo: courvoisierLogo,
       awards: [{ src: award2, alt: "Courvoisier Award" }],

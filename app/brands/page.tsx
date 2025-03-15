@@ -52,6 +52,7 @@ const brands = [
     ],
     headFont: "engravers",
     bodyFont: "chronicle",
+    website: "https://www.teelingwhiskey.com/",
   },
   {
     images: [courvoisierVS, courvoisierVSOP, courvoisierXO],
@@ -64,6 +65,7 @@ const brands = [
     ],
     headFont: "akzidenz",
     bodyFont: "trade",
+    website: "https://www.courvoisier.com/",
   },
   {
     images: [bisquitVSOP, bisquitXO],
@@ -75,6 +77,7 @@ const brands = [
     ],
     headFont: "bisquit",
     bodyFont: "bisquit",
+    website: "https://www.bisquitdubouche.com/",
   },
   {
     images: [buenAmigoSilver, buenAmigoGold, buenAmigoCoffee],
@@ -87,6 +90,7 @@ const brands = [
     ],
     headFont: "fmbolyar",
     bodyFont: "fmbolyar",
+    website: "",
   },
   {
     images: [neftBlack, neftWhite],
@@ -98,6 +102,7 @@ const brands = [
     ],
     headFont: "interstate",
     bodyFont: "interstate",
+    website: "https://neftvodka.com/en/",
   },
   {
     images: [padreAzulBlanco, padreAzulReposado, padreAzulAnejo],
@@ -110,6 +115,7 @@ const brands = [
     ],
     headFont: "handley",
     bodyFont: "hand",
+    website: "https://padreazul.com/",
   },
 ];
 

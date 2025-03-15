@@ -15,6 +15,7 @@ export interface BrandsPageCardProps {
   reverse: boolean;
   headFont: string;
   bodyFont: string;
+  website?: string;
 }
 
 const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
@@ -25,6 +26,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
   reverse,
   headFont,
   bodyFont,
+  website,
 }) => {
   const brandId = title.toLowerCase().replace(/\s+|&/g, "-");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -133,6 +135,11 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
             {description[currentIndex]}
           </motion.span>
         </p>
+        {website && (
+          <p className="text-brand mt-2">
+            <a href={website}>Official Website</a>
+          </p>
+        )}
         {/* Navigation Dots */}
         <div className="flex justify-start gap-2 mt-6">
           {variations.map((_, index) => (
