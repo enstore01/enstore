@@ -75,7 +75,7 @@ const brands = [
       "Bisquit & Dubouché V.S.O.P is crafted using a unique distillation method, extending the process by nearly an hour longer than traditional Cognacs. From vineyard to distillation to the prestigious Cognac House of Bisquit & Dubouché, every step is guided by unwavering expertise and passion. The result is a premium V.S.O.P Cognac experience, built on tradition, craftsmanship, and an enduring commitment to excellence.",
       "Bisquit & Dubouché XO is a masterpiece of Cognac craftsmanship, offering an exceptional depth of flavor and an opulent sensory experience. It has a rich and complex aroma with notes of dried fruit, honey, cinnamon, and dark chocolate. A velvety texture with layers of ripe plum, hazelnut, and sweet spice, evolving into deep oak, leather undertones with a long, warm, and exceptionally smooth finish, leaving a lingering impression of elegance. Best enjoyed neat or with a drop of water to fully unveil its depth. An exquisite choice for those who appreciate refined luxury and timeless sophistication.",
     ],
-    headFont: "bisquit",
+    headFont: "bisquit-black",
     bodyFont: "bisquit",
     website: "https://www.bisquitdubouche.com/",
   },

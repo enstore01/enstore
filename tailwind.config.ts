@@ -30,6 +30,7 @@ export default {
         hand: ["hand", "cursive"],
         handley: ['"handley rough"', "cursive"],
         bisquit: ['"bisquit regular"', "sans-serif"],
+        "bisquit-black": ['"bisquit black"', "sans-serif"],
         radikal: ["radikal", "sans-serif"],
         fmbolyar: ["fmbolyar pro", "sans-serif"],
         interstate: ["interstate", "sans-serif"],

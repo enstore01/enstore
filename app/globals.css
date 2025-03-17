@@ -19,6 +19,7 @@
   --font-hand: "hand", cursive;
   --font-handley: "handley rough", cursive;
   --font-bisquit: "bisquit regular", sans-serif;
+  --font-bisquit-black: "bisquit black", sans-serif;
   --font-radikal: "radikal", sans-serif;
   --font-fmbolyar: "fmbolyar pro", sans-serif;
   --font-interstate: "interstate", sans-serif;
@@ -38,7 +39,13 @@
 }
 @font-face {
   font-family: "bisquit regular";
-  src: url("/fonts/bisquit-regular/bisquit-regular.ttf") format("truetype");
+  src: url("/fonts/bisquit-regular/BisquitText-Regular") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bisquit black";
+  src: url("/fonts/bisquit-regular/BisquitText-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
