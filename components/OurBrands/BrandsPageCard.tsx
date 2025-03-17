@@ -136,7 +136,7 @@ const BrandsPageCard: React.FC<BrandsPageCardProps> = ({
           </motion.span>
         </p>
         {website && (
-          <p className="text-brand mt-2">
+          <p className="text-white mt-4 bg-brand px-4 py-2 rounded-sm w-[150px]">
             <a href={website}>Official Website</a>
           </p>
         )}
