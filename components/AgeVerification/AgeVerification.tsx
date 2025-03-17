@@ -72,7 +72,7 @@ const AgeVerification = () => {
             transition={{ type: "spring", damping: 25 }}
             className="bg-white rounded-lg shadow-2xl max-w-md w-full p-6 text-center"
           >
-            <div className="mx-auto w-24 h-24 relative mb-4">
+            <div className="mx-auto w-40 h-24 relative mb-4">
               <Image
                 src={logo}
                 alt="Enstore Logo"
