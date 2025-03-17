@@ -1,17 +1,17 @@
 import PageHeader from "@/components/PageHeader/PageHeader";
 import BrandsPageCard from "@/components/OurBrands/BrandsPageCard";
 import Footer from "@/components/Footer/Footer";
-import teelingSmallBatch from "@/public/images/teelingSmallBatch2.jpg";
-import teelingSingleGrain from "@/public/images/teelingSingleGrain.jpg";
-import teelingSingleMalt from "@/public/images/singleMalt.jpg";
-import teelingBlackpitts from "@/public/images/TeelingBlackpitts.jpg";
-import teeling21YO from "@/public/images/TeelingWhiskeyRising21YO.jpg";
-import teeling30YO from "@/public/images/30yo70boxbar.jpg";
+import teelingSmallBatch from "@/public/images/smallBatch.png";
+import teelingSingleGrain from "@/public/images/singleGrain.jpg";
+import teelingSingleMalt from "@/public/images/singleMalt1.png";
+import teelingBlackpitts from "@/public/images/blackpitts.png";
+import teeling21YO from "@/public/images/21years.jpg";
+import teeling30YO from "@/public/images/30years.png";
 import neftBlack from "@/public/images/neftBlack.jpg";
 import neftWhite from "@/public/images/neftWhite.jpg";
-import padreAzulBlanco from "@/public/images/padreAzulBlanco.png";
-import padreAzulReposado from "@/public/images/padreAzulReposado.png";
-import padreAzulAnejo from "@/public/images/padreAzulAnejo.png";
+import padreAzulBlanco from "@/public/images/blanco1.webp";
+import padreAzulReposado from "@/public/images/reposado1.webp";
+import padreAzulAnejo from "@/public/images/anejo1.webp";
 import courvoisierVSOP from "@/public/images/courvoisierVSOP.webp";
 import courvoisierXO from "@/public/images/courvoisierXO.webp";
 import courvoisierVS from "@/public/images/courvoisierVS.webp";
@@ -130,7 +130,7 @@ const OurBrandsPage = () => {
       <PageHeader
         src="/images/IMG_3730.jpg"
         title="Our Brands"
-        description="We offer a variety of premium wines and spirits that cater to different tastes and occasions."
+        description="We offer a variety of premium wines and spirits that cater to the drinking experience of Nigerian Consumer"
       />
       <div className="container py-10">
         {brands.map((brand, index) => (
