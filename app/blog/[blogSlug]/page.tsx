@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getPost } from "@/sanity/lib/client";
 import { PortableText } from "next-sanity";
 import ShareButton from "@/components/ShareButton/ShareButton";
+import { urlFor } from "@/sanity/lib/image";
 
 export default async function BlogPost({
   params,
@@ -92,6 +93,24 @@ export default async function BlogPost({
                       {children}
                     </a>
                   ),
+                },
+                types: {
+                  image: ({ value }) => {
+                    if (!value?.asset?._ref) {
+                      return null;
+                    }
+                    return (
+                      <div className="my-8 relative w-full aspect-video">
+                        <Image
+                          src={urlFor(value).url()}
+                          alt={value.alt || "Blog post image"}
+                          fill
+                          className="rounded-lg object-cover"
+                          sizes="(max-width: 768px) 100vw, 800px"
+                        />
+                      </div>
+                    );
+                  },
                 },
               }}
             />
