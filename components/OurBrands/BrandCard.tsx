@@ -12,7 +12,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ image, title, description }) => {
   const brandId = title.toLowerCase().replace(/\s+|&/g, "-");
 
   return (
-    <div className="bg-light shadow-lg rounded overflow-hidden w-[300px] sm:w-[330px] flex-none snap-start mt-10 border">
+    <div className="bg-light shadow-lg rounded overflow-hidden w-[300px] sm:w-[330px] flex-none snap-start mt-10 border flex flex-col">
       {/* Image */}
       <div className="relative w-full h-80">
         <Image
@@ -27,12 +27,12 @@ const BrandCard: React.FC<BrandCardProps> = ({ image, title, description }) => {
       </div>
 
       {/* Content */}
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
         <p className="text-gray-600 mt-2 text-justify">{description}</p>
 
         {/* Learn More Button */}
-        <Link href={`/brands#${brandId}`}>
+        <Link href={`/brands#${brandId}`} className="mt-auto">
           <button className="mt-4 text-navy font-medium underline hover:text-brand">
             Learn More
           </button>

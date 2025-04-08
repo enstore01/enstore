@@ -40,9 +40,8 @@ const MainNavigation = () => {
             <Image
               src={logo}
               alt="Enstore logo"
-              // width={120}
-              height={30} // 120 * (71/416) ≈ 21
-              className="cursor-pointer"
+              height={30}
+              className="cursor-pointer h-[20px] md:h-[30px] w-auto"
               priority
               quality={100}
             />
