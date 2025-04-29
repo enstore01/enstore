@@ -9,11 +9,11 @@ const Hero: React.FC = () => {
   // Array of background images for the slideshow
   const backgroundImages = [
     "/images/hero4.jpg",
-    "/images/courvoisiercopy2.png",
-    "/images/bandD.webp",
     "/images/copy1.avif",
-    "/images/buen.jpg",
     "/images/padre.jpg",
+    "/images/bandD.webp",
+    "/images/courvoisiercopy2.png",
+    "/images/buen.jpg",
   ];
 
   // Auto-rotate images
