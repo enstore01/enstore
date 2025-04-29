@@ -1,4 +1,4 @@
-import managementImage1 from "@/public/images/man.jpg";
+import managementImage1 from "@/public/images/ogu.jpg";
 import managementImage2 from "@/public/images/edijana2.png";
 import managementImage3 from "@/public/images/david2.png";
 import { StaticImageData } from "next/image";
