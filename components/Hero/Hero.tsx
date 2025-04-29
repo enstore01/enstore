@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       setCurrentImageIndex(
         prevIndex => (prevIndex + 1) % backgroundImages.length
       );
-    }, 5000); // Change image every 5 seconds
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
       {/* Content */}
       <div className="container relative z-10 flex items-center justify-center h-full">
