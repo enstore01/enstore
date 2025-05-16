@@ -7,6 +7,13 @@ import blogImage from "@/public/images/padre-azul-3.webp";
 
 const BlogPage = async () => {
   const posts = await getAllPosts();
+  console.log(posts);
+
+  // Sort posts by date, latest first
+  const sortedPosts = [...posts].sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
 
   return (
     <div>
@@ -15,7 +22,7 @@ const BlogPage = async () => {
         title="Latest News"
         description="Stay updated with the latest happenings, exclusive events, and exciting releases in the world of spirits, wine, and more"
       />
-      <NewsList posts={posts} />
+      <NewsList posts={sortedPosts} />
       <div className="w-full mt-10">
         <Image
           src={blogImage}

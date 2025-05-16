@@ -7,6 +7,12 @@ import { getAllPosts } from "@/sanity/lib/client";
 const LatestNewsSection = async () => {
   const posts = await getAllPosts();
 
+  // Sort posts by date, latest first
+  const sortedPosts = [...posts].sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+
   return (
     <section className="py-8">
       <div className="container relative">
@@ -19,7 +25,7 @@ const LatestNewsSection = async () => {
         </div>
       </div>
       <div className="mt-10 flex gap-10 justify-center px-4 flex-wrap">
-        {posts.slice(0, 4).map((news, index) => (
+        {sortedPosts.slice(0, 4).map((news, index) => (
           <NewsCard
             slug={news.slug}
             key={index}
