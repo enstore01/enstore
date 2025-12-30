@@ -21,8 +21,8 @@ export const managementData: ManagementMember[] = [
     link: "https://www.linkedin.com/in/emmanuel-ogu-48654777 ",
     mail: "Emmanuel.ogu@enstore-ng.com",
   },
- 
 ];
+
 
 
 
