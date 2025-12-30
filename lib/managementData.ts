@@ -22,15 +22,7 @@ export const managementData: ManagementMember[] = [
     link: "https://www.linkedin.com/in/emmanuel-ogu-48654777 ",
     mail: "Emmanuel.ogu@enstore-ng.com",
   },
-  {
-    image: managementImage2,
-    title: "General Manager, Corporate Services",
-    name: "Edijana Udosen",
-    description:
-      "Edijana Udosen is a transformational business leader with over 17 years of executive experience spanning Marketing Communications, Wines & Spirits, Oil & Gas, Technology & Innovation, and Financial Services. A strategic architect of corporate success, she excels in corporate governance, human capital management, organizational transformation, stakeholder engagement, and regulatory affairs. As General Manager, Corporate Services at Enstore, Edijana plays a critical role in shaping corporate direction and ensuring business sustainability. She leads Human Resources, Administration & Facilities, ICT, Board Relations, Government Relations, Corporate Communications, and Key Stakeholder Engagements, integrating these functions into a cohesive strategy that drives operational excellence, compliance, and corporate influence. A visionary change leader, Edijana has successfully designed and executed large-scale corporate restructuring, digital transformation, and workforce optimization initiatives, strengthening business resilience and competitive advantage. Her expertise in policy development, change management, and business process reengineering has been instrumental in streamlining operations, enhancing governance, and fostering high-performance cultures. With a proven track record in strategic leadership, Edijana has advised executive teams and boards on governance best practices, risk mitigation, and regulatory compliance, ensuring businesses remain agile and forward-focused in dynamic market environments. She holds a Bachelor’s degree in Computer Science from Lagos State University and a Master’s degree in International Human Resources Management from Rome Business School. She has also earned an Advanced Professional Certificate in Strategic Human Resources Management from the Metropolitan School of Business & Management, UK, along with professional certifications in Agile Project Management, Strategic Leadership, and Corporate Governance. A respected authority in corporate strategy and governance, Edijana is an active member of the Chartered Institute of Personnel Management (CIPM), Nigeria, and the Human Resources Certification Institute (HRCI), USA. She remains a driving force in business transformation, regulatory excellence, and corporate leadership, ensuring Enstore Nigeria maintains its industry leadership and long-term strategic vision.",
-    link: "https://www.linkedin.com/in/edijana-udosen",
-    mail: "Edijana.udosen@enstore-ng.com",
-  },
+ 
   {
     image: managementImage3,
     title: "General Manager, Commercial",
@@ -41,3 +33,4 @@ export const managementData: ManagementMember[] = [
     mail: "David.Allison@enstore-ng.com",
   },
 ];
+
