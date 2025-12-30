@@ -23,14 +23,6 @@ export const managementData: ManagementMember[] = [
     mail: "Emmanuel.ogu@enstore-ng.com",
   },
  
-  {
-    image: managementImage3,
-    title: "General Manager, Commercial",
-    name: "David Allison",
-    description:
-      "David Allison is a seasoned sales and logistics executive with over 20 years of experience spanning logistics, warehousing, inventory management, sales, e-commerce, and operations management. His expertise in driving commercial strategies, optimizing supply chain operations, and leading high-impact business transformations has delivered measurable results in cost reduction, productivity enhancement, and revenue growth across diverse industries, including wines & spirits, FMCG, logistics, and e-commerce.  As General Manager, Commercial at Enstore, David is responsible for driving revenue growth, expanding market share, and optimizing supply chain efficiencies. His portfolio includes Sales & Trade Management, Marketing & Brand Management, and Supply Chain & Logistics Management, ensuring that commercial and operational strategies are seamlessly integrated to deliver business success.  David is a results-oriented leader with a proven track record in managing large-scale logistics operations, leading high-performance teams, and fostering strategic business relationships. His ability to collaborate with third-party logistics partners (3PLs), e-commerce platforms, corporate clients, and key stakeholders has been instrumental in building sustainable and scalable business solutions.  He holds a BSc in Business Administration and Marketing, with professional certifications in sales excellence, supply chain management, project management, key account management, and operations optimization. His thought leadership in commercial strategy and logistics innovation continues to make a significant impact in transforming business operations for long-term growth and competitiveness.",
-    link: "https://www.linkedin.com/in/david-allison-99403280",
-    mail: "David.Allison@enstore-ng.com",
-  },
 ];
+
 
