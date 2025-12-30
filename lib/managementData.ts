@@ -10,7 +10,6 @@ export interface ManagementMember {
   link: string;
   mail: string;
 }
-
 export const managementData: ManagementMember[] = [
   {
     image: managementImage1,
@@ -22,6 +21,7 @@ export const managementData: ManagementMember[] = [
     mail: "Emmanuel.ogu@enstore-ng.com",
   },
 ];
+
 
 
 
