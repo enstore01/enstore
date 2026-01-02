@@ -59,7 +59,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="mt-6 text-sm">
-          Enstore &copy; 2024 - All rights reserved.
+          Enstore &copy; 2026 - All rights reserved.
         </p>
       </div>
     </footer>
@@ -67,4 +67,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
