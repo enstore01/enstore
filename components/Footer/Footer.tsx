@@ -14,7 +14,6 @@ const Footer = () => {
           <Link href="/">Home</Link>
           <Link href="/brands">Our Brands</Link>
           <Link href="/blog">Blog</Link>
-          <Link href="/management">Management</Link>
           <Link href="/careers">Careers</Link>
         </nav>
         <div className="flex justify-center gap-6 mt-6">
@@ -68,3 +67,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
